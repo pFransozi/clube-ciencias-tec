@@ -49,4 +49,4 @@ A aula foi dividida em dois momentos de seis atividades: mensagens com `print` e
 
 A execução usa um Web Worker, com interrupção manual, limite de saída e limite de tempo. Os erros comuns recebem orientações em português; os detalhes técnicos ficam recolhidos. É necessário servir os arquivos por HTTP, como no GitHub Pages, e ter acesso ao CDN do Pyodide. Para testar localmente, execute `python3 -m http.server 8000` na raiz do projeto e abra `http://localhost:8000/aulas/07-programacao-python.html`.
 
-O material anterior foi preservado em `aulas/07-programacao-python-referencia.html`. Os códigos salvos nessa versão mantêm suas chaves; a nova aula usa chaves próprias para não sobrescrevê-los. O armazenamento é local ao navegador, sem envio de respostas a um servidor.
+A aula usa chaves próprias para salvar os códigos e as respostas. O armazenamento é local ao navegador, sem envio de respostas a um servidor.
