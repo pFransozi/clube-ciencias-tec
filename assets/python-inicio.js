@@ -1,119 +1,205 @@
 const lessons = [
   {
-    title: 'Mostrar mensagens',
-    activities: [
+    "title": "Mostrar mensagens",
+    "activities": [
       {
-        id: 'mensagem-observar', kind: 'Observe e execute', title: 'Uma instrução, uma mensagem',
-        intro: '<p>Programar é escrever instruções que o computador consegue executar. Vamos começar com uma: <code>print</code>, que pede ao Python para mostrar algo no resultado.</p><p>Em <code>print("Olá!")</code>, os parênteses envolvem o que será mostrado. As aspas marcam o começo e o fim do texto.</p>',
-        code: 'print("Olá, Clube de Ciências!")',
-        task: 'Leia o código. Depois, clique em Executar sem mudar nada.',
-        prediction: 'Antes de executar: qual mensagem você espera ver?',
-        reflection: 'A mensagem apareceu onde você esperava? As aspas também apareceram?',
-        hints: ['Leia o que está entre as aspas.', 'O texto entre as aspas é a mensagem. print é a instrução para mostrá-la.', 'O resultado será: Olá, Clube de Ciências! As aspas delimitam o texto no código; não fazem parte da mensagem.']
+        "id": "fala-robo",
+        "title": "Um robô com fome",
+        "intro": "<p><code>print</code> é a instrução para mostrar algo na tela. O texto fica entre aspas, dentro dos parênteses: <code>print(\"mensagem\")</code>. As aspas indicam onde a mensagem começa e termina; elas não aparecem no resultado.</p>",
+        "example": "print(\"Sou um robô e quero uma coxinha.\")",
+        "expected": "Sou um robô e quero uma coxinha.",
+        "task": "Troque apenas a mensagem por uma fala engraçada de robô. Sugestões: “Minha bateria acabou na hora da prova.” ou “Atualização concluída: agora sei fazer miojo.” Preserve print, aspas e parênteses.",
+        "code": "print(\"Sou um robô e quero uma coxinha.\")",
+        "solution": "print(\"Minha bateria acabou na hora da prova.\")",
+        "hints": [
+          "Mude somente o trecho entre as aspas.",
+          "A estrutura é print(\"sua frase aqui\").",
+          "Uma possibilidade:\nprint(\"Minha bateria acabou na hora da prova.\")"
+        ],
+        "kind": "Mostrar mensagens"
       },
       {
-        id: 'mensagem-alterar', kind: 'Altere uma coisa', title: 'Agora o computador mostra sua mensagem',
-        intro: '<p>Vamos manter a mesma instrução e trocar apenas a mensagem. Para selecionar o texto, clique e arraste sobre ele. Preserve as aspas e os parênteses.</p>',
-        code: 'print("Olá, Clube de Ciências!")',
-        task: 'Troque somente o texto entre as aspas pelo nome do seu grupo. Execute novamente.',
-        prediction: 'Qual parte deve mudar no resultado?',
-        reflection: 'O que você mudou no código? O que precisou manter?',
-        hints: ['Localize o trecho Olá, Clube de Ciências!', 'Apague apenas esse trecho e escreva o nome do grupo entre as mesmas aspas.', 'Por exemplo: print("Grupo Nuvem"). Use o nome que sua dupla escolheu.']
+        "id": "gato-completar",
+        "title": "O gato mandou um recado",
+        "intro": "<p>Duas aspas juntas, <code>\"\"</code>, representam um texto vazio. Para criar uma mensagem, clique entre elas e escreva. O computador vai mostrar exatamente o texto que você colocou.</p>",
+        "example": "print(\"Miau. Este teclado agora é minha cama.\")",
+        "expected": "Miau. Este teclado agora é minha cama.",
+        "task": "Complete as aspas vazias com um recado de um animal. Pode ser um gato pedindo Wi-Fi, um cachorro reclamando da ração ou uma capivara pedindo silêncio.",
+        "code": "print(\"\")",
+        "solution": "print(\"Sou uma capivara. Favor não interromper meu cochilo.\")",
+        "hints": [
+          "Clique no espaço entre as duas aspas.",
+          "Você só precisa escrever a fala do animal. Os outros sinais já estão prontos.",
+          "Uma possibilidade:\nprint(\"Sou uma capivara. Favor não interromper meu cochilo.\")"
+        ],
+        "kind": "Mostrar mensagens"
       },
       {
-        id: 'mensagem-completar', kind: 'Complete', title: 'Uma observação sobre o céu',
-        intro: '<p>O programa abaixo tem uma mensagem vazia: as duas aspas estão juntas. Clique entre elas para escrever. Use aspas retas como as do exemplo.</p>',
-        code: 'print("")',
-        task: 'Escreva entre as aspas uma frase sobre o céu de hoje e execute. Por exemplo: Hoje o céu está nublado.',
-        prediction: 'O que aconteceria se você executasse antes de escrever a frase?',
-        reflection: 'Explique para sua dupla para que servem as aspas.',
-        hints: ['O texto vai entre " e ".', 'Mantenha print e os dois parênteses. Preencha somente o espaço entre as aspas.', 'Uma possibilidade é print("Hoje o céu está nublado."). Com aspas vazias, o programa mostra apenas uma linha vazia.']
+        "id": "dialogo-linhas",
+        "title": "Uma conversa em duas linhas",
+        "intro": "<p>Cada <code>print</code> mostra uma mensagem em uma nova linha. O Python executa as instruções de cima para baixo. Use a tecla Enter para começar outra linha de código.</p>",
+        "example": "print(\"Computador: você é um robô?\")\nprint(\"Eu: depois de acordar cedo, talvez.\")",
+        "expected": "Computador: você é um robô?\nEu: depois de acordar cedo, talvez.",
+        "task": "Crie uma conversa com duas falas: uma pergunta de um alienígena e sua resposta. Escreva um print por linha. Sugestão: “Vocês comem a embalagem do pastel?” / “Só quando o papel gruda.”",
+        "code": "print(\"Alienígena: \")\nprint(\"Eu: \")",
+        "solution": "print(\"Alienígena: humanos carregam na tomada?\")\nprint(\"Eu: não, a gente carrega com pão de queijo.\")",
+        "hints": [
+          "Complete a fala depois de Alienígena: e a resposta depois de Eu:.",
+          "Mantenha cada mensagem em seu próprio print.",
+          "Uma possibilidade:\nprint(\"Alienígena: humanos carregam na tomada?\")\nprint(\"Eu: não, a gente carrega com pão de queijo.\")"
+        ],
+        "kind": "Mostrar mensagens"
       },
       {
-        id: 'mensagem-ordem', kind: 'Observe e experimente', title: 'Qual mensagem aparece primeiro?',
-        intro: '<p>Neste programa, o Python executa uma linha de cada vez, de cima para baixo. Cada <code>print</code> mostra uma mensagem em uma nova linha.</p>',
-        code: 'print("Primeiro: observar o céu.")\nprint("Depois: registrar a observação.")',
-        task: 'Execute. Depois, troque as duas linhas de posição e execute novamente.',
-        prediction: 'Qual mensagem vai aparecer primeiro no código inicial?',
-        reflection: 'Depois da troca, o Python seguiu a palavra “Primeiro” ou a posição das linhas?',
-        hints: ['Leia a linha de cima antes da linha de baixo.', 'Troque as linhas inteiras, incluindo print, aspas e parênteses.', 'O Python segue a posição das instruções. Se a linha com “Depois” estiver no topo, essa mensagem aparecerá primeiro.']
+        "id": "texto-numero",
+        "title": "Uma senha muito suspeita",
+        "intro": "<p>Para mostrar um texto, usamos aspas. Para mostrar um número, podemos escrevê-lo sem aspas: <code>print(7)</code>. Neste exemplo, o primeiro print mostra a frase e o segundo mostra o número.</p>",
+        "example": "print(\"Minha senha supersecreta é:\")\nprint(1234)",
+        "expected": "Minha senha supersecreta é:\n1234",
+        "task": "Faça o programa mostrar “Quantidade de abas abertas no meu cérebro:” e, na linha seguinte, um número inventado. Escreva a frase com aspas e o número sem aspas. Use apenas dados fictícios.",
+        "code": "print(\"\")\nprint()",
+        "solution": "print(\"Quantidade de abas abertas no meu cérebro:\")\nprint(99)",
+        "hints": [
+          "A frase vai entre as aspas do primeiro print.",
+          "Escreva um número dentro dos parênteses do segundo print.",
+          "Uma possibilidade:\nprint(\"Quantidade de abas abertas no meu cérebro:\")\nprint(99)"
+        ],
+        "kind": "Mostrar mensagens"
       },
       {
-        id: 'mensagem-corrigir', kind: 'Investigue um erro', title: 'Uma aspa ficou faltando',
-        intro: '<p>Erros fazem parte de programar. Este exemplo tem um erro proposital. Quando o Python não entende a escrita, precisamos conferir os sinais usados.</p>',
-        code: 'print("Hoje vamos observar o céu.)',
-        task: 'Execute e leia a orientação. Depois, coloque a aspa que falta no fim do texto, antes do parêntese, e execute outra vez.',
-        prediction: 'Você encontra a aspa de abertura? Onde deveria estar a de fechamento?',
-        reflection: 'Qual sinal você acrescentou? Por que ele era necessário?',
-        hints: ['O texto começa com uma aspa, mas não termina com outra.', 'No final, precisamos de ponto, aspa e parêntese: .")', 'A correção é print("Hoje vamos observar o céu."). Agora o Python consegue identificar onde o texto termina.']
+        "id": "erro-pizza",
+        "title": "A pizza perdeu uma aspa",
+        "intro": "<p>Os sinais precisam formar pares: uma aspa abre o texto e outra fecha; um parêntese abre e outro fecha. Se algum faltar, o Python avisa que não entendeu. O exemplo está correto; o exercício abaixo tem um erro proposital.</p>",
+        "example": "print(\"A pizza chegou antes da minha vontade de estudar.\")",
+        "expected": "A pizza chegou antes da minha vontade de estudar.",
+        "task": "Execute o exercício, leia a orientação e corrija a aspa que falta. Depois de fazer funcionar, invente outra desculpa que uma pizza daria para chegar atrasada.",
+        "code": "print(\"Desculpa o atraso. Fiquei presa no forno.)",
+        "solution": "print(\"Desculpa o atraso. O queijo não queria sair de casa.\")",
+        "hints": [
+          "Compare o final do exemplo com o final do exercício.",
+          "Feche o texto com uma aspa antes do parêntese: .\")",
+          "Uma possibilidade:\nprint(\"Desculpa o atraso. O queijo não queria sair de casa.\")"
+        ],
+        "kind": "Mostrar mensagens"
       },
       {
-        id: 'mensagem-criar', kind: 'Escreva com sua dupla', title: 'Nosso primeiro registro',
-        intro: '<p>Agora você vai escrever um programa pequeno usando o que já praticou. A área de código está vazia. Use a tecla Enter para começar a segunda linha.</p>',
-        code: '', task: 'Escreva duas instruções: a primeira mostra o nome do grupo; a segunda mostra uma observação sobre o céu. Execute e confira a ordem.',
-        prediction: 'Quais são as duas mensagens que seu programa vai mostrar?',
-        reflection: 'Explique uma linha do seu programa, incluindo print, aspas e parênteses.',
-        hints: ['Você precisa de um print para cada mensagem.', 'A estrutura de cada linha é print("sua mensagem").', 'Um exemplo:\nprint("Grupo Nuvem")\nprint("Hoje há nuvens no céu.")\nCada linha mostra uma mensagem. Use suas próprias observações.'],
-        finish: ['Consigo escrever uma mensagem usando print.', 'Consigo explicar para que servem aspas e parênteses.', 'Consigo prever a ordem de duas mensagens.']
+        "id": "criar-mini-historia",
+        "title": "Uma história de três frases",
+        "intro": "<p>Podemos juntar várias instruções para montar um pequeno programa. Para uma história de três frases, escreva três prints, um por linha. A ordem das linhas também será a ordem da história.</p>",
+        "example": "print(\"Um pinguim entrou na sala.\")\nprint(\"Pediu para ligar o ar-condicionado.\")\nprint(\"Disse que estava passando calor.\")",
+        "expected": "Um pinguim entrou na sala.\nPediu para ligar o ar-condicionado.\nDisse que estava passando calor.",
+        "task": "Escreva uma história engraçada de três frases. Escolha uma ideia: uma mochila que fala, um dragão com soluço ou uma geladeira que faz exercícios. A área de código está vazia para você criar seus três prints.",
+        "code": "",
+        "solution": "print(\"Minha mochila começou a falar.\")\nprint(\"Ela pediu férias.\")\nprint(\"Disse que estava carregando problemas demais.\")",
+        "hints": [
+          "Escolha um personagem e escreva o que aconteceu com ele.",
+          "Use print(\"primeira frase\"), pressione Enter e repita para as outras frases.",
+          "Uma possibilidade:\nprint(\"Minha mochila começou a falar.\")\nprint(\"Ela pediu férias.\")\nprint(\"Disse que estava carregando problemas demais.\")"
+        ],
+        "finish": "Seu primeiro conjunto de programas está pronto. Você já pode criar mensagens, diálogos e histórias usando print.",
+        "kind": "Mostrar mensagens"
       }
     ]
   },
   {
-    title: 'Guardar uma temperatura',
-    activities: [
+    "title": "Guardar informações",
+    "activities": [
       {
-        id: 'variavel-observar', kind: 'Retome e observe', title: 'Um nome para guardar um número',
-        intro: '<p>Na etapa anterior, usamos <code>print</code> para mostrar textos. Agora vamos guardar um número com um nome: isso é uma <strong>variável</strong>.</p><p>Na primeira linha, <code>temperatura = 23</code> guarda o número 23 com o nome temperatura. Aqui, <code>=</code> atribui um valor ao nome. Na segunda linha, <code>print(temperatura)</code> mostra o valor guardado.</p><p>Vamos usar temperaturas inteiras de exemplo, em graus Celsius.</p>',
-        code: 'temperatura = 23\nprint(temperatura)',
-        task: 'Leia cada linha em voz alta com sua dupla. Depois, execute sem alterar.',
-        prediction: 'Vai aparecer a palavra temperatura ou o número 23?',
-        reflection: 'Qual linha guarda o número? Qual linha mostra o valor?',
-        hints: ['Na segunda linha, temperatura está sem aspas.', 'Sem aspas, o Python procura o valor guardado com esse nome.', 'O resultado é 23. A primeira linha guarda esse valor; a segunda o mostra.']
+        "id": "pontos-jogo",
+        "title": "Quantos pontos vale esse tombo?",
+        "intro": "<p>Uma <strong>variável</strong> guarda um valor com um nome. Em <code>pontos = 10</code>, o sinal <code>=</code> atribui o número 10 ao nome pontos. Depois, <code>print(pontos)</code> mostra o valor guardado. O nome está sem aspas para o Python consultar a variável.</p>",
+        "example": "pontos = 10\nprint(pontos)",
+        "expected": "10",
+        "task": "Imagine um jogo em que o personagem ganha pontos por escorregar numa casca de banana. Troque 10 por uma pontuação inventada. Execute mantendo a segunda linha igual.",
+        "code": "pontos = 10\nprint(pontos)",
+        "solution": "pontos = 250\nprint(pontos)",
+        "hints": [
+          "A pontuação fica depois do sinal =.",
+          "Mude apenas o número da primeira linha. O print já consulta pontos.",
+          "Uma possibilidade:\npontos = 250\nprint(pontos)"
+        ],
+        "kind": "Guardar informações"
       },
       {
-        id: 'variavel-alterar', kind: 'Altere uma coisa', title: 'Uma nova leitura do termômetro',
-        intro: '<p>Imagine que o termômetro mostrou outra temperatura. Podemos mudar o valor guardado e usar a mesma instrução para mostrá-lo.</p>',
-        code: 'temperatura = 23\nprint(temperatura)',
-        task: 'Troque apenas 23 por 28. Mantenha a segunda linha e execute.',
-        prediction: 'O que aparecerá depois da mudança?',
-        reflection: 'Por que o resultado mudou se a linha com print ficou igual?',
-        hints: ['O valor que será guardado está depois do sinal =.', 'A primeira linha deve ficar temperatura = 28.', 'print(temperatura) mostra o valor guardado com esse nome. Como ele passou a ser 28 nesta execução, o resultado também muda.']
+        "id": "nome-monstro",
+        "title": "Batize seu monstro",
+        "intro": "<p>Uma variável também pode guardar texto. Em <code>nome = \"Zé Tentáculo\"</code>, as aspas pertencem ao texto guardado. Para mostrar esse texto, usamos <code>print(nome)</code>, sem aspas ao redor de nome.</p>",
+        "example": "nome = \"Zé Tentáculo\"\nprint(nome)",
+        "expected": "Zé Tentáculo",
+        "task": "Crie um nome engraçado para um monstro. Complete o texto da primeira linha e execute. Sugestões: Dona Meleca, Capitão Chulé ou Lorde Pudim.",
+        "code": "nome = \"\"\nprint(nome)",
+        "solution": "nome = \"Lorde Pudim\"\nprint(nome)",
+        "hints": [
+          "O nome do personagem vai entre as aspas da primeira linha.",
+          "A segunda linha mostra o texto guardado. Ela já está pronta.",
+          "Uma possibilidade:\nnome = \"Lorde Pudim\"\nprint(nome)"
+        ],
+        "kind": "Guardar informações"
       },
       {
-        id: 'variavel-comparar', kind: 'Compare', title: 'Com aspas e sem aspas',
-        intro: '<p>Uma diferença pequena muda o significado do código. <code>"temperatura"</code> é um texto. <code>temperatura</code>, sem aspas, é o nome da variável.</p>',
-        code: 'temperatura = 23\nprint("temperatura")\nprint(temperatura)',
-        task: 'Execute e compare as duas linhas do resultado. Depois, troque 23 por 19 e execute outra vez.',
-        prediction: 'Qual print mostrará uma palavra? Qual mostrará um número?',
-        reflection: 'Qual linha do resultado mudou? Por que a outra permaneceu igual?',
-        hints: ['Observe as aspas no primeiro print.', 'O primeiro print mostra um texto escrito no código; o segundo consulta a variável.', 'O resultado inicial é temperatura e, na linha seguinte, 23. Depois da alteração, só o número muda para 19.']
+        "id": "palavra-valor",
+        "title": "O nome da caixa ou o que tem dentro?",
+        "intro": "<p>Com aspas, <code>print(\"apelido\")</code> mostra a palavra apelido. Sem aspas, <code>print(apelido)</code> procura e mostra o valor da variável. Por isso, os dois prints do exemplo produzem resultados diferentes.</p>",
+        "example": "apelido = \"Batata Cósmica\"\nprint(\"apelido\")\nprint(apelido)",
+        "expected": "apelido\nBatata Cósmica",
+        "task": "Complete os dois prints: o primeiro deve mostrar a palavra apelido; o segundo, o valor guardado. Depois, invente outro apelido na primeira linha e execute novamente.",
+        "code": "apelido = \"Batata Cósmica\"\nprint()\nprint()",
+        "solution": "apelido = \"Pudim Intergaláctico\"\nprint(\"apelido\")\nprint(apelido)",
+        "hints": [
+          "O primeiro print precisa de texto entre aspas.",
+          "No primeiro, escreva \"apelido\". No segundo, escreva apelido sem aspas.",
+          "Uma possibilidade:\napelido = \"Pudim Intergaláctico\"\nprint(\"apelido\")\nprint(apelido)"
+        ],
+        "kind": "Guardar informações"
       },
       {
-        id: 'variavel-completar', kind: 'Complete', title: 'Mostre o valor guardado',
-        intro: '<p>Este programa já guarda uma temperatura, mas o <code>print()</code> está vazio. Escrever somente o nome da variável dentro dos parênteses permite mostrar seu valor.</p>',
-        code: 'temperatura = 21\nprint()',
-        task: 'Complete os parênteses de print para mostrar o valor da variável temperatura. Execute.',
-        prediction: 'Para mostrar o valor guardado, você deve escrever temperatura com aspas ou sem aspas?',
-        reflection: 'Se você usar print(21), o programa acompanhará uma mudança do valor na primeira linha? Explique.',
-        hints: ['Queremos consultar a variável, não repetir um número fixo.', 'Escreva temperatura dentro dos parênteses, sem aspas.', 'A segunda linha deve ser print(temperatura). print(21) sempre mostraria 21, mesmo se o valor guardado mudasse.']
+        "id": "energia-atualizar",
+        "title": "A bateria do modo segunda-feira",
+        "intro": "<p>Uma variável pode receber outro valor durante o programa. O Python segue de cima para baixo: cada print mostra o valor que a variável tem naquele momento. O segundo <code>=</code> substitui o valor guardado.</p>",
+        "example": "energia = 100\nprint(energia)\nenergia = 5\nprint(energia)",
+        "expected": "100\n5",
+        "task": "Mostre a energia de um personagem antes e depois de encontrar um bolo. Altere só os dois números: comece com pouca energia e termine com muita. Execute para ver os dois valores na ordem.",
+        "code": "energia = 100\nprint(energia)\nenergia = 5\nprint(energia)",
+        "solution": "energia = 2\nprint(energia)\nenergia = 100\nprint(energia)",
+        "hints": [
+          "Há um número na primeira linha e outro na terceira.",
+          "O primeiro print mostra o valor inicial. O segundo mostra o valor atribuído depois.",
+          "Uma possibilidade:\nenergia = 2\nprint(energia)\nenergia = 100\nprint(energia)"
+        ],
+        "kind": "Guardar informações"
       },
       {
-        id: 'variavel-corrigir', kind: 'Investigue um erro', title: 'Os nomes precisam combinar',
-        intro: '<p>O Python distingue letras maiúsculas e minúsculas. Para consultar uma variável, precisamos escrever o mesmo nome que usamos ao guardar o valor.</p>',
-        code: 'temperatura = 24\nprint(Temperatura)',
-        task: 'Execute e leia a orientação. Corrija o nome na segunda linha e execute novamente.',
-        prediction: 'Qual letra está diferente entre as duas linhas?',
-        reflection: 'Por que Temperatura e temperatura não funcionaram como o mesmo nome?',
-        hints: ['Compare a primeira letra dos dois nomes.', 'A variável foi criada com t minúsculo. Use o mesmo nome no print.', 'A segunda linha correta é print(temperatura). O resultado será 24.']
+        "id": "nome-corrigir",
+        "title": "O dragão confundiu as letras",
+        "intro": "<p>Para consultar uma variável, use o mesmo nome com que ela foi criada. O Python distingue maiúsculas e minúsculas: <code>dragao</code> e <code>Dragao</code> são nomes diferentes. O exemplo funciona; o exercício tem uma letra para corrigir.</p>",
+        "example": "dragao = \"Torradeira\"\nprint(dragao)",
+        "expected": "Torradeira",
+        "task": "Execute o exercício e corrija a letra diferente no print. Depois, troque o nome do dragão por outro. Sugestões: Churrasquinho, Faísca ou Senhor Micro-ondas.",
+        "code": "dragao = \"Torradeira\"\nprint(Dragao)",
+        "solution": "dragao = \"Senhor Micro-ondas\"\nprint(dragao)",
+        "hints": [
+          "Compare o d da primeira linha com o D da segunda.",
+          "A variável foi criada como dragao, com d minúsculo. Use esse mesmo nome no print.",
+          "Uma possibilidade:\ndragao = \"Senhor Micro-ondas\"\nprint(dragao)"
+        ],
+        "kind": "Guardar informações"
       },
       {
-        id: 'variavel-criar', kind: 'Escreva com sua dupla', title: 'Guarde outro dado da estação',
-        intro: '<p>Vamos aplicar a mesma ideia a outro dado. A variável <code>chuva</code> vai guardar a quantidade de chuva, em milímetros, de um registro de exemplo.</p>',
-        code: '', task: 'Crie a variável chuva com o valor 0. Na linha seguinte, mostre seu valor usando print. Execute. Depois, troque 0 por 5 e execute novamente.',
-        prediction: 'Quais resultados você espera nas duas execuções?',
-        reflection: 'Explique onde seu programa guarda o dado e onde o mostra. O que o número 0 representa neste registro?',
-        hints: ['Use a mesma estrutura de temperatura = 23, mas com outro nome e outro número.', 'Primeiro escreva chuva = 0. Depois use print para consultar chuva, sem aspas.', 'Uma solução:\nchuva = 0\nprint(chuva)\nO primeiro resultado é 0 mm. Ao trocar o valor por 5, o resultado será 5 mm. Zero indica que não foi registrada chuva nesse período.'],
-        finish: ['Consigo guardar um número em uma variável.', 'Consigo mostrar o valor de uma variável.', 'Consigo explicar a diferença entre texto com aspas e nome sem aspas.']
+        "id": "boletim-malucO",
+        "title": "O boletim do planeta Pudim",
+        "intro": "<p>Agora vamos combinar mensagens e uma variável. Um print com texto pode apresentar o dado; outro print consulta seu valor. Aqui, a temperatura é um número de exemplo em graus Celsius.</p>",
+        "example": "temperatura = 23\nprint(\"Temperatura na escola, em graus Celsius:\")\nprint(temperatura)",
+        "expected": "Temperatura na escola, em graus Celsius:\n23",
+        "task": "Crie um boletim de um planeta inventado: guarde um número na variável temperatura; mostre uma frase com o nome do planeta; mostre o valor da variável; termine com uma previsão engraçada, como “Possibilidade de chuva de pipoca”. São quatro linhas de código.",
+        "code": "",
+        "solution": "temperatura = 30\nprint(\"Temperatura no planeta Pudim, em graus Celsius:\")\nprint(temperatura)\nprint(\"Possibilidade de chuva de pipoca.\")",
+        "hints": [
+          "Comece com temperatura = seguido de um número. Depois, use três prints.",
+          "O primeiro e o último print mostram frases entre aspas. O print do meio mostra temperatura sem aspas.",
+          "Uma possibilidade:\ntemperatura = 30\nprint(\"Temperatura no planeta Pudim, em graus Celsius:\")\nprint(temperatura)\nprint(\"Possibilidade de chuva de pipoca.\")"
+        ],
+        "finish": "No planeta inventado vale brincar. Na investigação da escola, vamos usar a mesma programação com os dados reais da estação.",
+        "kind": "Guardar informações"
       }
     ]
   }
@@ -121,29 +207,29 @@ const lessons = [
 
 const $ = id => document.getElementById(id);
 let momentIndex = 0, activityIndex = 0, worker, ready = false, busy = false, runTimer, loadTimer;
-const prefix = 'clube_python_inicio_v2_'; // Preserve saved work from the original lesson.
+const prefix = 'clube_python_inicio_v3_'; // New activities; leave earlier saved work untouched.
 function read(key) { try { return localStorage.getItem(prefix + key); } catch { return null; } }
 function save(key, value) {
   try { localStorage.setItem(prefix + key, value); }
-  catch { $('storage-note').textContent = 'Este navegador não permitiu salvar. Seus textos ficam nesta página enquanto ela estiver aberta.'; }
+  catch { $('storage-note').textContent = 'Este navegador não permitiu salvar. Seu código fica nesta página enquanto ela estiver aberta.'; }
 }
 const current = () => lessons[momentIndex].activities[activityIndex];
 function persist() {
   const a = current();
-  ['code', 'prediction', 'reflection'].forEach(key => save(a.id + '_' + key, $(key).value));
+  save(a.id + '_code', $('code').value);
 }
 function render(focus = false) {
   const a = current(), count = lessons[momentIndex].activities.length;
-  $('progress').textContent = `Momento ${momentIndex + 1} · Atividade ${activityIndex + 1} de ${count}`;
+  $('progress').textContent = `Atividade ${activityIndex + 1} de ${count}`;
   document.querySelectorAll('[data-moment]').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.moment) === momentIndex)));
   $('activity-select').replaceChildren(...lessons[momentIndex].activities.map((a, index) => new Option(`${index + 1}. ${a.title}`, index, false, index === activityIndex)));
   $('kind').textContent = a.kind;
   $('activity-title').textContent = a.title;
   $('intro').innerHTML = a.intro;
   $('task').textContent = a.task;
-  $('prediction-label').textContent = a.prediction;
-  $('reflection-label').textContent = a.reflection;
-  ['code', 'prediction', 'reflection'].forEach(key => $(key).value = read(a.id + '_' + key) ?? (key === 'code' ? a.code : ''));
+  $('example-code').textContent = a.example;
+  $('example-output').textContent = a.expected;
+  $('code').value = read(a.id + '_code') ?? a.code;
   $('output').textContent = 'Você ainda não executou esta atividade nesta visita.';
   $('output').className = '';
   $('technical').hidden = true;
@@ -156,20 +242,13 @@ function render(focus = false) {
   $('finish').replaceChildren();
   if (a.finish) {
     const box = document.createElement('div'); box.className = 'finish';
-    const title = document.createElement('strong'); title.textContent = 'Pausa para conferir o que aprendemos'; box.append(title);
-    a.finish.forEach((text, index) => {
-      const label = document.createElement('label'), check = document.createElement('input'); check.type = 'checkbox';
-      check.checked = read(a.id + '_check_' + index) === '1';
-      check.onchange = () => save(a.id + '_check_' + index, check.checked ? '1' : '0');
-      label.append(check, document.createTextNode(text)); box.append(label);
-    });
     const note = document.createElement('p');
-    note.textContent = momentIndex === 0 ? 'Mostre seu programa ao professor. Se ainda houver dúvidas, retome uma atividade. Você pode deixar o momento 2 para outro encontro.' : 'Mostre e explique seu programa. No próximo encontro, poderemos usar os valores guardados para fazer pequenos cálculos.';
+    note.textContent = a.finish;
     box.append(note); $('finish').append(box);
   }
   $('previous').disabled = momentIndex === 0 && activityIndex === 0;
   $('next').hidden = momentIndex === 1 && activityIndex === count - 1;
-  $('next').textContent = activityIndex === count - 1 ? 'Ir ao momento 2 →' : 'Próxima atividade →';
+  $('next').textContent = activityIndex === count - 1 ? 'Guardar informações →' : 'Próxima atividade →';
   if (focus) $('activity-title').focus();
 }
 function navigate(moment, activity) {
@@ -180,9 +259,9 @@ document.querySelectorAll('[data-moment]').forEach(b => b.onclick = () => naviga
 $('activity-select').onchange = e => navigate(momentIndex, Number(e.target.value));
 $('previous').onclick = () => activityIndex > 0 ? navigate(momentIndex, activityIndex - 1) : navigate(momentIndex - 1, lessons[momentIndex - 1].activities.length - 1);
 $('next').onclick = () => activityIndex + 1 < lessons[momentIndex].activities.length ? navigate(momentIndex, activityIndex + 1) : navigate(momentIndex + 1, 0);
-['code', 'prediction', 'reflection'].forEach(key => $(key).addEventListener('input', persist));
+$('code').addEventListener('input', persist);
 $('reset').onclick = () => {
-  if ($('code').value !== current().code && !confirm('Voltar ao código inicial desta atividade? O código que você escreveu nela será substituído. Suas respostas serão mantidas.')) return;
+  if ($('code').value !== current().code && !confirm('Recomeçar este exercício? O código que você escreveu nele será substituído pelo código inicial.')) return;
   $('code').value = current().code; persist(); $('output').textContent = 'Código inicial recuperado. Execute para ver o resultado.'; $('output').className = ''; $('technical').hidden = true;
 };
 function setBusy(value) {

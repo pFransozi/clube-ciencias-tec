@@ -12,38 +12,43 @@
     <a href="../index.html">← Voltar ao clube</a>
     <p class="eyebrow">CLUBE DE CIÊNCIAS TEC · ENCONTRO 7</p>
     <h1>Vamos conversar com o computador?</h1>
-    <p>Já usamos dados para investigar o clima da escola. Agora vamos escrever pequenas instruções em Python, uma linguagem de programação.</p>
-    <p><strong>Comece pelo momento 1.</strong> O momento 2 pode ficar para outro encontro, quando você conseguir explicar seus primeiros programas.</p>
+    <p>Robôs com fome, gatos no teclado e planetas inventados: vamos usar Python para criar mensagens e guardar informações.</p>
+    <p>Comece pela aba <strong>Mostrar mensagens</strong>. Em cada atividade, leia a explicação, observe o exemplo e escreva seu código no exercício.</p>
   </header>
   <main>
     <details class="orientation">
       <summary>Como usar esta página</summary>
       <ol>
-        <li>Leia a tarefa e diga o que você acha que vai acontecer.</li>
+        <li>Leia a explicação e confira o código e o resultado do exemplo.</li>
         <li>Clique na área escura para escrever. O código é o texto com as instruções.</li>
         <li>Clique em <strong>Executar</strong> e leia o resultado logo abaixo.</li>
         <li>Altere somente o que a tarefa pedir e execute outra vez.</li>
       </ol>
-      <p>Se precisar, abra uma dica. O botão “Voltar ao exemplo” recupera o código inicial da atividade.</p>
+      <p>Se precisar, abra uma dica. O botão “Recomeçar exercício” recupera o código inicial da atividade.</p>
       <p>Em dupla: uma pessoa digita, a outra explica o resultado esperado. Troquem de papel na atividade seguinte.</p>
-      <p id="storage-note">Seus códigos e respostas ficam salvos apenas neste navegador. Em computador compartilhado, confira se há respostas de outra dupla.</p>
+      <p id="storage-note">Seus códigos ficam salvos apenas neste navegador. Em computador compartilhado, confira se há código de outra dupla.</p>
     </details>
-    <nav aria-label="Momentos da aula" class="moments">
+    <nav aria-label="Conteúdos da aula" class="moments">
       <button type="button" data-moment="0" aria-pressed="true">1 · Mostrar mensagens</button>
-      <button type="button" data-moment="1" aria-pressed="false">2 · Guardar uma temperatura</button>
+      <button type="button" data-moment="1" aria-pressed="false">2 · Guardar informações</button>
     </nav>
     <div class="progress-row"><p id="progress"></p><label for="activity-select">Ir para atividade <select id="activity-select"></select></label></div>
     <article id="activity" aria-labelledby="activity-title">
       <p class="eyebrow" id="kind"></p>
       <h2 id="activity-title" tabindex="-1"></h2>
+      <h3>1 · Entenda</h3>
       <div id="intro"></div>
-      <div class="task"><strong>Sua tarefa</strong><p id="task"></p></div>
-      <label class="question" for="prediction" id="prediction-label"></label>
-      <textarea id="prediction" rows="2" placeholder="Conte sua ideia em uma frase. Você também pode conversar com sua dupla."></textarea>
+      <section class="worked-example" aria-labelledby="example-title">
+        <h3 id="example-title">2 · Veja um exemplo</h3>
+        <pre id="example-code" aria-label="Código do exemplo"></pre>
+        <p>O que aparece no resultado:</p>
+        <pre id="example-output"></pre>
+      </section>
+      <div class="task"><h3>3 · Agora é sua vez</h3><p id="task"></p></div>
       <div class="editor">
         <label for="code">Seu código Python</label>
         <textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" aria-describedby="code-help"></textarea>
-        <div class="actions"><button id="run" type="button" disabled>Preparando Python…</button><button id="reset" type="button" class="secondary">Voltar ao exemplo</button><button id="stop" type="button" class="secondary" hidden>Parar execução</button></div>
+        <div class="actions"><button id="run" type="button" disabled>Preparando Python…</button><button id="reset" type="button" class="secondary">Recomeçar exercício</button><button id="stop" type="button" class="secondary" hidden>Parar execução</button></div>
         <p id="code-help">Escreva na área acima. O resultado aparece abaixo quando você executa.</p>
         <h3>Resultado</h3><pre id="output" aria-live="polite">Você ainda não executou esta atividade.</pre>
         <details id="technical" hidden><summary>Detalhes do erro</summary><pre id="technical-text"></pre></details>
@@ -51,7 +56,6 @@
       <p id="runtime-status" role="status">Preparando o Python no navegador. Você já pode ler e editar.</p>
       <button id="retry" type="button" class="secondary" hidden>Tentar carregar novamente</button>
       <div id="hints"></div>
-      <div class="reflection"><label for="reflection" id="reflection-label"></label><textarea id="reflection" rows="2" placeholder="Explique com suas palavras."></textarea></div>
       <div id="finish"></div>
     </article>
     <div class="navigation"><button id="previous" class="secondary" type="button">← Anterior</button><button id="next" type="button">Próxima atividade →</button></div>
