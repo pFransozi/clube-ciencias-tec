@@ -849,6 +849,92 @@ code {
   padding: 0 13px 12px;
 }
 
+.journal-card {
+  border-top: 5px solid var(--purple);
+  background: linear-gradient(180deg, #ffffff, #fcfaff);
+}
+
+.journal-intro {
+  color: #475569;
+  font-size: 1.02rem;
+}
+
+.journal-entry {
+  margin: 16px 0;
+  border: 1px solid #ddd3f5;
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.journal-entry summary {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  cursor: pointer;
+  padding: 14px 16px;
+  color: #3e2f6f;
+  background: var(--purple-soft);
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+.journal-entry[open] summary {
+  border-bottom: 1px solid #ddd3f5;
+}
+
+.journal-number {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 10px;
+  color: #fff;
+  background: var(--purple);
+}
+
+.journal-content {
+  padding: 16px 18px 18px;
+}
+
+.journal-content h3 {
+  margin-top: 16px;
+  color: var(--blue2);
+  font-size: 1rem;
+}
+
+.journal-questions {
+  margin: 8px 0 15px;
+}
+
+.journal-starter {
+  padding: 12px 14px;
+  border-left: 4px solid var(--purple);
+  border-radius: 9px;
+  background: #faf7ff;
+  color: #3f3558;
+}
+
+.journal-template td:first-child {
+  width: 42%;
+  font-weight: 750;
+}
+
+.closing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.closing-grid > div {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+
 .result-row {
   display: flex;
   gap: 9px;
@@ -986,7 +1072,8 @@ footer {
 
   .resources,
   .lesson-summary,
-  .concept-grid {
+  .concept-grid,
+  .closing-grid {
     grid-template-columns: 1fr;
   }
 

@@ -43,7 +43,9 @@
       <a href="#teste">5 · Testar a previsão</a>
       <a href="#avaliacao">6 · Avaliar o resultado</a>
       <a href="#apresentacao">7 · Apresentar</a>
-      <a href="07-programacao-python.html">8 · Avançar para Python</a>
+      <a href="#diario">8 · Diário de bordo</a>
+      <a href="#fechamento">9 · Fechamento</a>
+      <a href="07-programacao-python.html">10 · Avançar para Python</a>
     </div>
 
     <section id="laboratorio" class="card">
@@ -262,7 +264,128 @@
       <p><a class="btn primary" href="../materiais/planilhas/encontro-04-dados-151-registros.csv" download>Baixar dados climáticos →</a> <a class="btn" href="../materiais/index.html">Ver materiais →</a></p>
     </section>
 
-    <p class="source-list"><strong>Material-base:</strong> “Missões do Microclima da Escola”, sequência de 22 missões aplicada antes da introdução à programação.</p>
+    <section id="diario" class="card journal-card">
+      <span class="section-kicker">DIÁRIO DE BORDO · ENCONTROS 16 A 19</span>
+      <h2>8. Dos gráficos à primeira regra de previsão</h2>
+      <p class="journal-intro">Os últimos registros mostram a mudança mais importante do projeto: deixamos de apenas organizar os dados e passamos a usá-los para procurar padrões e testar uma previsão. No diário, diferencie sempre <strong>observação</strong>, <strong>hipótese</strong> e <strong>resultado do teste</strong>.</p>
+
+      <details class="journal-entry" open>
+        <summary><span class="journal-number">16</span>Construindo o gráfico da temperatura</summary>
+        <div class="journal-content">
+          <p><strong>O que você precisa compreender:</strong> para mostrar como a temperatura mudou, usamos a coluna de data e hora no eixo horizontal e a temperatura no eixo vertical. O gráfico de linhas liga os registros na ordem do tempo. Um título como <strong>Temperatura na escola ao longo do tempo</strong> informa o que está sendo observado. Depois, procuramos o momento de maior e menor temperatura e descrevemos se houve aumento, queda ou muitas oscilações.</p>
+          <h3>Pense, converse e registre</h3>
+          <ul class="journal-questions">
+            <li>Quais colunas foram usadas no gráfico?</li>
+            <li>Que tipo de gráfico escolhemos?</li>
+            <li>Qual título foi colocado?</li>
+            <li>Em que momento apareceu a maior temperatura?</li>
+            <li>Em que momento apareceu a menor temperatura?</li>
+            <li>A temperatura apresentou aumento, queda ou muitas oscilações?</li>
+          </ul>
+          <p class="journal-starter"><strong>Começo possível:</strong> “Construímos um gráfico de linhas para observar como a temperatura mudou ao longo do tempo...”</p>
+        </div>
+      </details>
+
+      <details class="journal-entry" open>
+        <summary><span class="journal-number">17</span>Gráficos de pressão e chuva</summary>
+        <div class="journal-content">
+          <p><strong>O que você precisa compreender:</strong> a pressão atmosférica varia ao longo do tempo, por isso pode ser representada por uma linha; a chuva acontece em eventos com quantidades, por isso as colunas ajudam a destacá-la. Colocamos os gráficos no mesmo intervalo de datas e observamos se a pressão subiu ou caiu antes dos registros de precipitação. Uma mudança próxima da chuva é uma pista para investigar, mas não prova sozinha uma relação de causa.</p>
+          <h3>Pense, converse e registre</h3>
+          <ul class="journal-questions">
+            <li>Qual gráfico foi usado para representar a pressão?</li>
+            <li>Qual gráfico foi usado para representar a chuva?</li>
+            <li>A pressão apresentou períodos de subida ou queda?</li>
+            <li>Em quais momentos houve precipitação?</li>
+            <li>Aconteceu alguma mudança na pressão antes da chuva?</li>
+            <li>O que descobrimos ao comparar os gráficos?</li>
+          </ul>
+          <p class="journal-starter"><strong>Começo possível:</strong> “Depois do gráfico da temperatura, construímos gráficos para a pressão atmosférica e para a chuva...”</p>
+        </div>
+      </details>
+
+      <details class="journal-entry" open>
+        <summary><span class="journal-number">18</span>Procurando padrões no microclima</summary>
+        <div class="journal-content">
+          <p><strong>O que você precisa compreender:</strong> <strong>microclima</strong> é o conjunto de condições climáticas de uma área pequena, como a escola, influenciada por árvores, prédios, sombra, piso e circulação de ar. Um <strong>padrão</strong> é um comportamento que se repete. Para procurá-lo, localizamos um evento de chuva, observamos as medições anteriores de pressão e temperatura e repetimos o procedimento em outros eventos. Se o comportamento aparece apenas uma vez, ainda não é um padrão confiável.</p>
+          <h3>Pense, converse e registre</h3>
+          <ul class="journal-questions">
+            <li>O que significa microclima?</li>
+            <li>Por que os dados da escola representam um microclima?</li>
+            <li>O que é um padrão?</li>
+            <li>O que observamos nas medições anteriores à chuva?</li>
+            <li>A pressão aumentou ou diminuiu?</li>
+            <li>A temperatura mudou?</li>
+            <li>Encontramos o mesmo comportamento em mais de um caso?</li>
+          </ul>
+          <p class="journal-starter"><strong>Começo possível:</strong> “Começamos a investigar se existiam sinais que apareciam antes dos registros de chuva...”</p>
+        </div>
+      </details>
+
+      <details class="journal-entry" open>
+        <summary><span class="journal-number">19</span>Criando e testando uma regra de previsão</summary>
+        <div class="journal-content">
+          <p><strong>O que você precisa compreender:</strong> uma regra de previsão transforma a hipótese em uma condição clara, por exemplo: <em>se a pressão diminuir, prever chuva</em>. A planilha calcula a variação, aplica a condição e compara “Sim” ou “Não” com o que realmente aconteceu. Contamos acertos e erros e examinamos as situações em que a regra falhou. Melhorar pode significar mudar o limite, combinar temperatura e pressão, incluir outra variável ou testar em mais dados. A regra deve nascer dos dados e continuar aberta a correções.</p>
+          <h3>Pense, converse e registre</h3>
+          <ul class="journal-questions">
+            <li>Qual regra nosso grupo criou?</li>
+            <li>Quais variáveis foram utilizadas?</li>
+            <li>Como transformamos a regra em uma fórmula?</li>
+            <li>Como verificamos se a previsão estava correta?</li>
+            <li>Quantas vezes a regra acertou?</li>
+            <li>Em quais situações ela errou?</li>
+            <li>O que poderíamos modificar para melhorar a regra?</li>
+          </ul>
+          <p class="journal-starter"><strong>Começo possível:</strong> “Com base nos padrões encontrados, nosso grupo criou a seguinte regra de previsão...”</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="fechamento" class="card journal-card">
+      <span class="section-kicker">REGISTRO DE FECHAMENTO</span>
+      <h2>9. O caminho percorrido</h2>
+      <p class="journal-intro">Depois de completar os registros dos encontros, escreva uma reflexão final. Em vez de apenas listar conteúdos, explique como suas ideias mudaram, em que você colaborou e que nova pergunta apareceu.</p>
+
+      <div class="closing-grid">
+        <div>
+          <h3>Antes e depois</h3>
+          <ul>
+            <li>O que eu não sabia antes de participar do clube?</li>
+            <li>O que aprendi sobre clima e meteorologia?</li>
+            <li>O que aprendi sobre planilhas e estatística?</li>
+            <li>Qual atividade foi mais interessante?</li>
+            <li>Qual foi a atividade mais difícil?</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Participação e próximos passos</h3>
+          <ul>
+            <li>Em qual atividade mais contribuí com meu grupo?</li>
+            <li>Como os erros ajudaram no desenvolvimento do trabalho?</li>
+            <li>O que ainda queremos investigar?</li>
+            <li>Como esse projeto pode ajudar a escola ou a comunidade?</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="journal-starter"><strong>Começo possível:</strong> “Durante os encontros do Clube de Ciências Tec, percorremos um caminho que começou com dados desorganizados e chegou à criação de uma regra de previsão. Nesse processo, aprendemos que...”</p>
+
+      <h3>Combinados para o diário de bordo</h3>
+      <ul class="check-list">
+        <li>Escreva com suas próprias palavras.</li>
+        <li>Registre aquilo que realmente aconteceu.</li>
+        <li>Não invente resultados ou dificuldades.</li>
+        <li>Quando não lembrar de alguma informação, converse com os colegas.</li>
+        <li>Consulte as planilhas, fotografias e materiais das aulas.</li>
+        <li>Explique também os erros e as tentativas que não funcionaram.</li>
+        <li>Evite responder apenas “sim”, “não”, “foi legal” ou “foi difícil”.</li>
+        <li>Procure explicar por que a atividade foi interessante ou difícil.</li>
+        <li>O diário pode conter desenhos, gráficos, fórmulas, tabelas e fotografias.</li>
+        <li>Cada integrante pode registrar percepções diferentes sobre a mesma atividade.</li>
+      </ul>
+      <div class="callout green"><strong>Um registro científico completo</strong> não precisa parecer perfeito. Ele precisa mostrar o que aconteceu, quais evidências foram usadas, o que o grupo aprendeu e o que ainda merece ser investigado.</div>
+    </section>
+
+    <p class="source-list"><strong>Materiais-base:</strong> “Missões do Microclima da Escola”, sequência de 22 missões aplicada antes da introdução à programação, e “Roteiro para o Diário de Bordo”.</p>
     <div class="lesson-nav"><a class="btn" href="05-missao-clima.html">← Missão Clima</a><a class="btn primary" href="07-programacao-python.html">Encontro 7 · Programação →</a></div>
   </main>
 </body>

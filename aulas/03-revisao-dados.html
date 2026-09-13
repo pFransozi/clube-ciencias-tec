@@ -40,6 +40,7 @@
       <a href="#detetive">Modo detetive</a>
       <a href="#formulas">Fórmulas</a>
       <a href="#chuva">Investigar chuva</a>
+      <a href="#diario">Diário de bordo</a>
     </nav>
 
     <section id="origem" class="card">
@@ -169,7 +170,46 @@
       <p><a class="btn primary" href="../materiais/planilhas/encontro-03-dados-extraidos-fotos.csv" download>Baixar planilha para revisão →</a> <a class="btn" href="../materiais/planilhas/encontro-03-conferencia.csv" download>Ver pontos para conferência →</a></p>
     </section>
 
-    <p class="source-list"><strong>Material-base:</strong> atividade “Explorando a Planilha do Tempo”, planilha transcrita e fotografias dos registros aplicados no Encontro 3.</p>
+    <section id="diario" class="card journal-card">
+      <span class="section-kicker">DIÁRIO DE BORDO · ENCONTROS 10 E 11</span>
+      <h2>5. Investigar e classificar a chuva</h2>
+      <p class="journal-intro">Depois de conferir os registros, a turma pode concentrar a análise na precipitação. Primeiro investigamos quando e quanto choveu; depois usamos uma condição para classificar todas as linhas sem repetir o trabalho manualmente.</p>
+
+      <details class="journal-entry" open>
+        <summary><span class="journal-number">10</span>Investigando a chuva</summary>
+        <div class="journal-content">
+          <p><strong>O que você precisa compreender:</strong> precipitação é a água que cai da atmosfera, como chuva, e costuma ser registrada em milímetros. Na planilha, <strong>0 mm</strong> significa que a medição foi feita e não registrou chuva; um valor <strong>maior que 0</strong> indica chuva. A função MÁXIMO encontra o maior volume de uma medição, SOMA calcula a chuva total e CONT.SE permite comparar quantos registros tiveram ou não tiveram chuva. Os resultados precisam virar uma frase, não ficar apenas como números soltos.</p>
+          <h3>Pense, converse e registre</h3>
+          <ul class="journal-questions">
+            <li>Em quais registros houve chuva?</li>
+            <li>Como identificamos um registro com chuva?</li>
+            <li>Qual foi o maior volume de chuva?</li>
+            <li>Como calculamos a chuva total?</li>
+            <li>Houve mais registros com chuva ou sem chuva?</li>
+            <li>O que os resultados mostraram?</li>
+          </ul>
+          <p class="journal-starter"><strong>Começo possível:</strong> “Neste encontro, concentramos nossa investigação nos registros de chuva...”</p>
+        </div>
+      </details>
+
+      <details class="journal-entry" open>
+        <summary><span class="journal-number">11</span>Usando condições na planilha</summary>
+        <div class="journal-content">
+          <p><strong>O que você precisa compreender:</strong> a fórmula <strong>SE</strong> testa uma condição e escolhe uma resposta. Em <code>=SE(H4&gt;0;"Choveu";"Não choveu")</code>, a planilha pergunta se o valor da chuva é maior que zero. Se for, mostra “Choveu”; caso contrário, mostra “Não choveu”. Ao arrastar a fórmula, a mesma lógica é aplicada às outras linhas. Se alguma célula estiver como texto, com unidade misturada ao número ou com referência errada, a classificação pode falhar e precisa ser conferida.</p>
+          <h3>Pense, converse e registre</h3>
+          <ul class="journal-questions">
+            <li>Para que serviu a fórmula SE?</li>
+            <li>Qual condição utilizamos para decidir se havia chovido?</li>
+            <li>Que respostas a fórmula mostrava?</li>
+            <li>Como a fórmula evitou que classificássemos cada linha manualmente?</li>
+            <li>A fórmula funcionou em todos os registros?</li>
+          </ul>
+          <p class="journal-starter"><strong>Começo possível:</strong> “Criamos uma nova coluna para indicar automaticamente se havia chovido ou não...”</p>
+        </div>
+      </details>
+    </section>
+
+    <p class="source-list"><strong>Materiais-base:</strong> atividade “Explorando a Planilha do Tempo”, planilha transcrita, fotografias dos registros e “Roteiro para o Diário de Bordo”.</p>
     <div class="lesson-nav"><a class="btn" href="02-analise-clima.html">← Encontro 2</a><a class="btn primary" href="04-estatistica.html">Encontro 4 →</a></div>
   </main>
 </body>
