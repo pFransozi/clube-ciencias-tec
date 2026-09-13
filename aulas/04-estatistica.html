@@ -1,1 +1,204 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Encontro 4 — Estatística</title><link rel="stylesheet" href="../assets/site.css"></head><body><div class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html"><span class="brand-icon">🌦️</span><span>Clube de Ciências Tec</span></a><div class="toplinks"><a href="03-revisao-dados.html">← Anterior</a><a href="../materiais/index.html">Materiais</a><a href="05-missao-clima.html">Próximo →</a></div></div></div><main class="lesson-page"><span class="section-kicker">ENCONTRO 4 · FASE 2</span><h1>Investigando o clima com estatística</h1><p class="lead">A planilha passa a ser usada para comparar grupos, medir variações e interpretar melhor os dados meteorológicos.</p><section class="card"><h2>🎯 O que vamos revisar e aprender</h2><ul><li>Retomar mínimo, máximo, média e contagem.</li><li>Aprender mediana, amplitude, frequência e comparação entre grupos.</li><li>Usar fórmulas no Google Sheets.</li><li>Interpretar os resultados e tirar conclusões sobre os dados.</li></ul></section><section class="card"><h2>📐 Novas ideias estatísticas</h2><p><strong>Mediana:</strong> o valor que fica no meio quando os dados são colocados em ordem.</p><p><strong>Amplitude:</strong> diferença entre o maior e o menor valor; ajuda a perceber se uma variável mudou muito ou pouco.</p><p><strong>Frequência:</strong> quantas vezes uma condição ocorre, como chuva maior que zero.</p></section><section class="card"><h2>🌧️ Investigando a chuva</h2><ul><li>Contar registros com chuva e sem chuva usando CONT.SE.</li><li>Encontrar o maior valor de precipitação.</li><li>Calcular a chuva total com SOMA.</li><li>Comparar a quantidade de registros com chuva e sem chuva.</li></ul></section><section class="card"><h2>⏰ Comparando grupos</h2><p>O material separa os registros em manhã e tarde para comparar temperatura, umidade e ocorrência de chuva.</p><div class="callout green"><strong>Fechamento:</strong> o estudante registra descobertas e explica o que média, mediana e amplitude mostram sobre os dados.</div></section><section class="card"><h2>📁 Materiais deste encontro</h2><p>A base possui os 151 registros usados nas análises. Ao final do arquivo também aparecem os valores de mínimo, máximo, média, contagem, mediana e amplitude da base original.</p><p><a class="btn primary" href="../materiais/planilhas/encontro-04-dados-151-registros.csv" download>Baixar planilha com 151 registros →</a></p><p><a class="btn" href="https://support.google.com/docs/table/25273?hl=pt-BR" target="_blank" rel="noopener">Consultar funções do Google Sheets ↗</a> <a class="btn" href="../materiais/index.html">Ver todos os materiais →</a></p></section><p class="source-list"><strong>Fontes:</strong> 04/atividade_estatistica_planilha.docx, 04/dados_extraidos_151_registros.xlsx e 04/link_ajuda.docx.</p><div class="lesson-nav"><a class="btn" href="03-revisao-dados.html">← Encontro 3</a><a class="btn primary" href="05-missao-clima.html">Missão Clima →</a></div></main></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Aula guiada de estatística com mediana, amplitude, frequência e comparação dos dados climáticos.">
+  <title>Encontro 4 — Investigando o clima com estatística</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html"><span class="brand-icon">🌦️</span><span>Clube de Ciências Tec</span></a>
+      <div class="toplinks"><a href="03-revisao-dados.html">← Anterior</a><a href="../materiais/index.html">Materiais</a><a href="05-missao-clima.html">Próximo →</a></div>
+    </div>
+  </div>
+
+  <main class="lesson-page">
+    <span class="section-kicker">ENCONTRO 4 · ESTATÍSTICA</span>
+    <h1>Investigando o clima com estatística</h1>
+    <p class="lead">Com 151 registros, olhar linha por linha não é suficiente. Vamos resumir os dados, medir variações e comparar grupos.</p>
+
+    <div class="lesson-summary">
+      <div>
+        <h2>Pergunta do encontro</h2>
+        <p>Como poucos resultados podem nos ajudar a compreender uma planilha com muitos registros?</p>
+      </div>
+      <div>
+        <h2>Ao final, você consegue</h2>
+        <ul class="check-list">
+          <li>calcular mediana e amplitude;</li>
+          <li>contar ocorrências com CONT.SE;</li>
+          <li>comparar manhã e tarde.</li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="mini-nav" aria-label="Partes da aula">
+      <a href="#retomada">Retomada</a>
+      <a href="#novas-medidas">Novas medidas</a>
+      <a href="#chuva">Chuva</a>
+      <a href="#comparacao">Comparar grupos</a>
+      <a href="#resultados">Conferir resultados</a>
+    </nav>
+
+    <section id="retomada" class="card">
+      <h2>1. O que já sabemos fazer</h2>
+      <p>Na aula anterior, revisamos a qualidade dos dados. Agora podemos voltar às fórmulas com mais segurança.</p>
+
+      <div class="concept-grid">
+        <div class="concept">
+          <h3>Mínimo e máximo</h3>
+          <p>Mostram as duas pontas do conjunto: o menor e o maior valor.</p>
+          <span class="formula">=MÍNIMO(D2:D152)</span>
+          <span class="formula">=MÁXIMO(D2:D152)</span>
+        </div>
+        <div class="concept">
+          <h3>Média</h3>
+          <p>Soma os valores e divide pela quantidade. Ajuda a encontrar um valor representativo.</p>
+          <span class="formula">=MÉDIA(D2:D152)</span>
+        </div>
+        <div class="concept">
+          <h3>Contagem</h3>
+          <p>Confirma quantos números participam do cálculo. Nossa base deve ter 151 medições.</p>
+          <span class="formula">=CONT.NÚM(D2:D152)</span>
+        </div>
+        <div class="concept">
+          <h3>Intervalo completo</h3>
+          <p>Na planilha desta aula, os dados começam na linha 2 e terminam na 152.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="novas-medidas" class="card">
+      <h2>2. Duas novas medidas: mediana e amplitude</h2>
+      <div class="learning-cycle">
+        <div class="cycle-step">
+          <span class="cycle-label">1 · Entenda</span>
+          <h3>Mediana</h3>
+          <p>Coloque os valores em ordem. A mediana é o valor que fica no meio.</p>
+          <span class="formula">=MED(D2:D152)</span>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">2 · Veja um exemplo</span>
+          <h3>18, 20, 20, 22, 25</h3>
+          <p>O valor central é 20. Portanto, a mediana é 20.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">3 · Faça</span>
+          <h3>Calcule na base</h3>
+          <p>Encontre a mediana das colunas TS e TU. Compare com a média.</p>
+        </div>
+      </div>
+
+      <div class="learning-cycle">
+        <div class="cycle-step">
+          <span class="cycle-label">1 · Entenda</span>
+          <h3>Amplitude</h3>
+          <p>Mostra a distância entre o maior e o menor valor.</p>
+          <span class="formula">máximo − mínimo</span>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">2 · Veja um exemplo</span>
+          <h3>25 − 18 = 7</h3>
+          <p>Nesse conjunto, a temperatura varia 7 °C entre as duas pontas.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">3 · Faça</span>
+          <h3>Monte uma fórmula</h3>
+          <p>Use máximo e mínimo na mesma expressão.</p>
+          <span class="formula">=MÁXIMO(D2:D152)-MÍNIMO(D2:D152)</span>
+        </div>
+      </div>
+
+      <div class="callout amber"><strong>Média e mediana não competem.</strong> Elas observam o conjunto de maneiras diferentes. Quando ficam distantes, vale procurar valores muito altos, muito baixos ou incomuns.</div>
+    </section>
+
+    <section id="chuva" class="card">
+      <h2>3. Frequência: quantas vezes choveu?</h2>
+      <p>Frequência indica quantas vezes uma situação apareceu. A função <strong>CONT.SE</strong> verifica uma condição em cada célula.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Pergunta</th><th>Condição</th><th>Fórmula</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Quantos registros tiveram chuva?</td><td>Chuva maior que zero</td><td><code>=CONT.SE(H2:H152;">0")</code></td></tr>
+            <tr><td>Quantos registros não tiveram chuva?</td><td>Chuva igual a zero</td><td><code>=CONT.SE(H2:H152;"=0")</code></td></tr>
+            <tr><td>Quanto choveu no total?</td><td>Somar todos os valores</td><td><code>=SOMA(H2:H152)</code></td></tr>
+            <tr><td>Qual foi a maior chuva?</td><td>Maior valor da coluna</td><td><code>=MÁXIMO(H2:H152)</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="answer">
+        <summary>Antes de revelar: você espera mais registros com chuva ou sem chuva?</summary>
+        <p>A base possui <strong>32 registros com chuva</strong> e <strong>119 sem chuva</strong>. A chuva total registrada é <strong>64,9 mm</strong>, e o maior valor em uma medição é <strong>4 mm</strong>.</p>
+      </details>
+    </section>
+
+    <section id="comparacao" class="card">
+      <h2>4. Comparar grupos: manhã e tarde</h2>
+      <p>Uma média geral pode esconder diferenças entre horários. Por isso, vamos dividir a base em dois grupos.</p>
+      <div class="table-wrap">
+        <table class="data-table compact">
+          <thead>
+            <tr><th>Grupo</th><th>Regra usada</th><th>O que comparar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Manhã</td><td>Horário antes de 12:00</td><td>TS, umidade e quantidade de registros com chuva.</td></tr>
+            <tr><td>Tarde</td><td>Horário a partir de 12:00</td><td>TS, umidade e quantidade de registros com chuva.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <ol class="step-list">
+        <li><strong>Classifique cada registro.</strong> Crie uma coluna “Período” com manhã ou tarde.</li>
+        <li><strong>Separe ou filtre os grupos.</strong> Comece pela manhã.</li>
+        <li><strong>Calcule a média de TS e umidade.</strong> Repita para a tarde.</li>
+        <li><strong>Conte os registros com chuva.</strong> Compare os dois períodos.</li>
+        <li><strong>Explique a diferença.</strong> Use valores concretos, não apenas “maior” ou “menor”.</li>
+      </ol>
+
+      <details class="answer">
+        <summary>Conferir a comparação feita com os 151 registros</summary>
+        <ul>
+          <li><strong>Manhã:</strong> 78 registros, TS média de 19,34 e umidade média de 77,63%.</li>
+          <li><strong>Tarde:</strong> 73 registros, TS média de 22,47 e umidade média de 70,73%.</li>
+          <li>Nessa base, a tarde apresentou temperatura média maior e umidade média menor.</li>
+          <li>Houve 12 registros com chuva pela manhã e 20 à tarde.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="resultados" class="card">
+      <h2>5. Conferir e interpretar os resultados</h2>
+      <p>Use a tabela abaixo apenas depois de calcular. Se um resultado for diferente, confira o intervalo e veja se as seis linhas de resumo no fim do CSV entraram por engano no cálculo.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Variável</th><th>Mínimo</th><th>Máximo</th><th>Média</th><th>Mediana</th><th>Amplitude</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>TS</td><td>10</td><td>31</td><td>20,85</td><td>21</td><td>21</td></tr>
+            <tr><td>TU</td><td>8</td><td>24</td><td>17,29</td><td>17,5</td><td>16</td></tr>
+            <tr><td>Umidade (%)</td><td>45</td><td>93</td><td>74,29</td><td>75</td><td>48</td></tr>
+            <tr><td>HTP</td><td>798</td><td>960</td><td>901,03</td><td>907</td><td>162</td></tr>
+            <tr><td>Chuva (mm)</td><td>0</td><td>4</td><td>0,43</td><td>0</td><td>4</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout green"><strong>Uma conclusão completa:</strong> “A mediana da chuva foi 0 mm porque a maioria dos registros não apresentou chuva.” O número aparece junto com seu significado.</div>
+      <div class="callout purple"><strong>Piada de planilha:</strong> quando a fórmula funciona de primeira, desconfie por três segundos e depois comemore.</div>
+      <p><a class="btn primary" href="../materiais/planilhas/encontro-04-dados-151-registros.csv" download>Baixar base com 151 registros →</a> <a class="btn" href="https://support.google.com/docs/table/25273?hl=pt-BR" target="_blank" rel="noopener">Ajuda do Google Sheets ↗</a></p>
+    </section>
+
+    <p class="source-list"><strong>Material-base:</strong> atividade “Investigando o Clima com Estatística em Planilha” e base de 151 registros aplicadas no Encontro 4.</p>
+    <div class="lesson-nav"><a class="btn" href="03-revisao-dados.html">← Encontro 3</a><a class="btn primary" href="05-missao-clima.html">Missão Clima →</a></div>
+  </main>
+</body>
+</html>

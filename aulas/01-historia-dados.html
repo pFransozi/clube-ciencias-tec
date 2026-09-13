@@ -1,1 +1,172 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Encontro 1 — História-problema e dados</title><link rel="stylesheet" href="../assets/site.css"></head><body><div class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html"><span class="brand-icon">🌦️</span><span>Clube de Ciências Tec</span></a><div class="toplinks"><a href="../index.html">Percurso</a><a href="../materiais/index.html">Materiais</a><a href="02-analise-clima.html">Próximo encontro →</a></div></div></div><main class="lesson-page"><span class="section-kicker">ENCONTRO 1 · FASE 1</span><h1>De onde vem nossa investigação?</h1><p class="lead">História-problema e organização de dados climáticos.</p><div class="callout"><strong>Objetivo do material original:</strong> organizar registros climáticos em uma planilha, identificar problemas de padronização e preparar os dados para análises futuras com gráficos, estatística e previsões.</div><section class="card"><h2>🌧️ A situação que iniciou a pesquisa</h2><p>Professores e estudantes perceberam que atividades ao ar livre às vezes eram canceladas por chuva ou vento e que o clima na escola parecia mudar bastante ao longo do dia.</p><div class="callout green"><strong>Pergunta levantada pelo grupo:</strong> será que os dados da estação meteorológica da escola podem ajudar a entender melhor o clima local e até apoiar previsões simples?</div></section><section class="card"><h2>🗂️ Primeira missão</h2><ol><li>Ler os registros fornecidos.</li><li>Separar as informações em colunas adequadas.</li><li>Padronizar datas, horários e unidades de medida.</li><li>Organizar os dados em uma planilha.</li><li>Deixar a base pronta para análise posterior.</li></ol></section><section class="card"><h2>🔎 O que observar nos dados</h2><ul><li>Quais informações devem virar colunas?</li><li>Os valores de temperatura estão escritos do mesmo jeito?</li><li>Chuva e vento usam sempre a mesma unidade?</li><li>Há números sem unidade explícita?</li><li>A tabela final fica fácil de ler e comparar?</li></ul></section><section class="card"><h2>📁 Material para começar</h2><p>Use este modelo vazio para organizar novas medições da estação. Ele já contém as colunas utilizadas no projeto.</p><p><a class="btn primary" href="../materiais/planilhas/modelo-coleta-clima.csv" download>Baixar planilha modelo →</a> <a class="btn" href="../materiais/index.html">Ver todos os materiais →</a></p></section><p class="source-list"><strong>Fonte:</strong> 01/atividade_clube_ciencias_historia_dados.docx</p><div class="lesson-nav"><a class="btn" href="../index.html">← Voltar ao percurso</a><a class="btn primary" href="02-analise-clima.html">Encontro 2 →</a></div></main></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Aula sobre a origem da investigação climática, dados brutos e organização de registros em planilha.">
+  <title>Encontro 1 — História-problema e dados</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html"><span class="brand-icon">🌦️</span><span>Clube de Ciências Tec</span></a>
+      <div class="toplinks"><a href="../index.html">Percurso</a><a href="../materiais/index.html">Materiais</a><a href="02-analise-clima.html">Próximo encontro →</a></div>
+    </div>
+  </div>
+
+  <main class="lesson-page">
+    <span class="section-kicker">ENCONTRO 1 · CONHECER E ORGANIZAR</span>
+    <h1>De onde vem nossa investigação?</h1>
+    <p class="lead">Uma situação da escola vira pergunta de pesquisa. Depois, registros climáticos bagunçados começam a virar dados que podemos analisar.</p>
+
+    <div class="lesson-summary">
+      <div>
+        <h2>Pergunta do encontro</h2>
+        <p>Os dados da estação meteorológica podem nos ajudar a entender o clima perto da escola?</p>
+      </div>
+      <div>
+        <h2>Ao final, você consegue</h2>
+        <ul class="check-list">
+          <li>reconhecer um registro e uma variável;</li>
+          <li>organizar dados em linhas e colunas;</li>
+          <li>explicar por que precisamos padronizar.</li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="mini-nav" aria-label="Partes da aula">
+      <a href="#historia">A história</a>
+      <a href="#conceitos">Conceitos</a>
+      <a href="#dados">Dados brutos</a>
+      <a href="#missao">Missão guiada</a>
+    </nav>
+
+    <section id="historia" class="card">
+      <h2>1. A situação que iniciou a pesquisa</h2>
+      <p>Algumas atividades na quadra e no pátio eram canceladas por causa da chuva ou do vento. Em certos dias, porém, ficava a dúvida: será que o cancelamento era mesmo necessário?</p>
+      <p>Os estudantes também percebiam mudanças durante o dia: calor pela manhã, vento mais forte depois e, às vezes, chuva no fim da tarde. O grupo decidiu investigar essas mudanças usando a estação meteorológica da escola.</p>
+      <div class="callout green"><strong>Nossa pergunta:</strong> como temperatura, chuva e vento se comportam ao longo do tempo? Há padrões que podemos reconhecer?</div>
+
+      <div class="learning-cycle">
+        <div class="cycle-step">
+          <span class="cycle-label">1 · Entenda</span>
+          <h3>Uma pergunta inicia a investigação</h3>
+          <p>Antes de abrir a planilha, precisamos saber o que queremos descobrir.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">2 · Veja um exemplo</span>
+          <h3>Uma observação da escola</h3>
+          <p>“O vento parece ficar mais forte em alguns momentos de chuva.”</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">3 · Faça</span>
+          <h3>Converse com a dupla</h3>
+          <p>Que informação precisaríamos registrar para investigar essa observação?</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="conceitos" class="card">
+      <h2>2. Antes da planilha: quatro ideias importantes</h2>
+      <div class="concept-grid">
+        <div class="concept">
+          <h3>Dado</h3>
+          <p>É um valor registrado. Exemplo: <strong>22 °C</strong>.</p>
+        </div>
+        <div class="concept">
+          <h3>Variável</h3>
+          <p>É algo que pode mudar. Temperatura, chuva e vento são variáveis.</p>
+        </div>
+        <div class="concept">
+          <h3>Registro</h3>
+          <p>É o conjunto de valores obtidos em um momento. Exemplo: dia 1º, às 8h.</p>
+        </div>
+        <div class="concept">
+          <h3>Unidade</h3>
+          <p>Mostra o que o número mede: °C, mm e km/h. Um número sem unidade pode confundir.</p>
+        </div>
+      </div>
+      <div class="callout amber"><strong>Exemplo:</strong> “22” sozinho não conta toda a história. Pode ser 22 °C, 22 mm de chuva ou 22 km/h de vento.</div>
+    </section>
+
+    <section id="dados" class="card">
+      <h2>3. Dados brutos: o laboratório ainda está bagunçado</h2>
+      <p>Os primeiros registros foram escritos de maneiras diferentes. Isso foi mantido de propósito para que a turma pudesse descobrir os problemas.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Registro bruto</th><th>O que chama atenção?</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>01/03 - 08h - Temp: 22C - Chuva: 0 - Vento: 5 kmh</td><td>Faltam símbolos e barras nas unidades.</td></tr>
+            <tr><td>02/03 - 14h - Temp: 27 - Chuva: 0 - Vento: 15</td><td>Os três números aparecem sem unidade.</td></tr>
+            <tr><td>03/03 - 14h - Temp: 26°C - Chuva: 10mm - Vento: 18 km/h</td><td>As unidades estão presentes, mas o espaçamento varia.</td></tr>
+            <tr><td>04/03 - 08h - Temp: 19 - Chuva: 0 - Vento: 4 kmh</td><td>A temperatura e a chuva aparecem sem unidade.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="activity">
+        <summary>Ver os 15 registros usados na atividade</summary>
+        <div class="activity-content">
+          <ul>
+            <li>01/03 - 08h - Temp: 22C - Chuva: 0 - Vento: 5 kmh</li>
+            <li>01/03 - 14h - Temp: 28C - Chuva: 2 mm - Vento: 12 kmh</li>
+            <li>01/03 - 20h - Temp: 24C - Chuva: 5 mm - Vento: 10 kmh</li>
+            <li>02/03 - 08h - Temp: 21°C - Chuva: 0 mm - Vento: 6 km/h</li>
+            <li>02/03 - 14h - Temp: 27 - Chuva: 0 - Vento: 15</li>
+            <li>02/03 - 20h - Temp: 23C - Chuva: 0 mm - Vento: 8 kmh</li>
+            <li>03/03 - 08h - Temp: 20C - Chuva: 1 mm - Vento: 7 kmh</li>
+            <li>03/03 - 14h - Temp: 26°C - Chuva: 10mm - Vento: 18 km/h</li>
+            <li>03/03 - 20h - Temp: 22C - Chuva: 3 mm - Vento: 12</li>
+            <li>04/03 - 08h - Temp: 19 - Chuva: 0 - Vento: 4 kmh</li>
+            <li>04/03 - 14h - Temp: 25C - Chuva: 0 mm - Vento: 9 km/h</li>
+            <li>04/03 - 20h - Temp: 21°C - Chuva: 0 mm - Vento: 6 kmh</li>
+            <li>05/03 - 08h - Temp: 23C - Chuva: 0 - Vento: 5</li>
+            <li>05/03 - 14h - Temp: 29C - Chuva: 0 mm - Vento: 14 km/h</li>
+            <li>05/03 - 20h - Temp: 25C - Chuva: 8 mm - Vento: 11 kmh</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="answer">
+        <summary>Por que não podemos calcular diretamente com esses registros?</summary>
+        <p>Porque data, hora, temperatura, chuva e vento estão misturados no mesmo texto. Além disso, as unidades não seguem o mesmo padrão. Primeiro precisamos separar e limpar.</p>
+      </details>
+    </section>
+
+    <section id="missao" class="card">
+      <h2>4. Missão guiada: transformar anotações em tabela</h2>
+      <ol class="step-list">
+        <li><strong>Crie cinco colunas:</strong> Data, Hora, Temperatura (°C), Chuva (mm) e Vento (km/h).</li>
+        <li><strong>Leia um registro por vez.</strong> Cada registro ocupará uma linha.</li>
+        <li><strong>Digite apenas os valores.</strong> A unidade já aparece no título da coluna.</li>
+        <li><strong>Padronize.</strong> Use a mesma forma para datas, horas e números.</li>
+        <li><strong>Revise.</strong> Compare cada linha da planilha com o registro original.</li>
+      </ol>
+
+      <h3>Veja a transformação</h3>
+      <div class="table-wrap">
+        <table class="data-table compact">
+          <thead>
+            <tr><th>Data</th><th>Hora</th><th>Temperatura (°C)</th><th>Chuva (mm)</th><th>Vento (km/h)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>01/03</td><td>08h</td><td>22</td><td>0</td><td>5</td></tr>
+            <tr><td>01/03</td><td>14h</td><td>28</td><td>2</td><td>12</td></tr>
+            <tr><td>01/03</td><td>20h</td><td>24</td><td>5</td><td>10</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout purple"><strong>Analogia rápida:</strong> dado bruto é como uma mochila depois da aula. A informação está lá, mas precisamos separar cada coisa antes de encontrar o que queremos.</div>
+      <p><a class="btn primary" href="../materiais/planilhas/modelo-coleta-clima.csv" download>Baixar planilha modelo →</a> <a class="btn" href="../materiais/index.html">Ver todos os materiais →</a></p>
+    </section>
+
+    <p class="source-list"><strong>Material-base:</strong> atividade de história-problema e organização de dados climáticos aplicada no Encontro 1.</p>
+    <div class="lesson-nav"><a class="btn" href="../index.html">← Voltar ao percurso</a><a class="btn primary" href="02-analise-clima.html">Encontro 2 →</a></div>
+  </main>
+</body>
+</html>

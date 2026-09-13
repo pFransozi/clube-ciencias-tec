@@ -1,1 +1,269 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Encontro 6 — Microclima e previsão</title><link rel="stylesheet" href="../assets/site.css"></head><body><div class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html"><span class="brand-icon">🌦️</span><span>Clube de Ciências Tec</span></a><div class="toplinks"><a href="05-missao-clima.html">← Anterior</a><a href="../materiais/index.html">Materiais</a><a href="07-programacao-python.html">Próximo →</a></div></div></div><main class="lesson-page"><span class="section-kicker">ENCONTRO 6 · FASE 4</span><h1>Missões do microclima da escola</h1><p class="lead">Da planilha aos gráficos e à primeira regra de previsão de chuva.</p><section class="card"><h2>🌡️ Do dado ao comportamento</h2><p>O material retoma a organização da planilha e as variáveis do clima para construir gráficos de temperatura, pressão atmosférica e precipitação.</p><ul><li>Temperatura ao longo do tempo.</li><li>Pressão atmosférica ao longo do tempo.</li><li>Chuva registrada na escola.</li></ul></section><section class="card"><h2>🔎 Entrando no modo previsão</h2><p>O grupo deixa de apenas olhar os dados e passa a procurar sinais que aparecem antes da chuva.</p><div class="callout green"><strong>Ideia central do material:</strong> prever não é adivinhar; é usar dados do passado para estimar algo que pode acontecer depois.</div></section><section class="card"><h2>📉 Variações e padrões</h2><ul><li>Criar a coluna Variação da Pressão.</li><li>Criar a coluna Variação da Temperatura.</li><li>Localizar registros com chuva e observar as duas ou três medições anteriores.</li><li>Comparar gráficos e anotar o que mudou antes da chuva.</li></ul></section><section class="card"><h2>🧪 Primeira regra de previsão</h2><ol><li>Cada grupo cria uma regra simples usando os dados.</li><li>A regra é transformada em fórmula na planilha.</li><li>A previsão é comparada com a realidade.</li><li>O grupo calcula a taxa de acerto.</li><li>Os estudantes apresentam a regra e sugerem melhorias.</li></ol></section><section class="card"><h2>📁 Dados para investigar</h2><p>A mesma base com 151 registros pode ser reutilizada para construir gráficos, observar a sequência temporal e testar hipóteses relacionadas à chuva.</p><p><a class="btn primary" href="../materiais/planilhas/encontro-04-dados-151-registros.csv" download>Baixar dados climáticos →</a> <a class="btn" href="../materiais/index.html">Ver todos os materiais →</a></p></section><div class="callout amber"><strong>Microclima:</strong> o estudo se concentra na região da escola, um lugar pequeno e específico onde pátio, prédios, árvores, sombra e vento podem influenciar os dados.</div><p class="source-list"><strong>Fonte:</strong> 06/missoes_microclima_escola.docx.</p><div class="lesson-nav"><a class="btn" href="05-missao-clima.html">← Missão Clima</a><a class="btn primary" href="07-programacao-python.html">Encontro 7 · Programação →</a></div></main></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Aula guiada sobre microclima, gráficos, padrões e teste de uma primeira regra de previsão de chuva.">
+  <title>Encontro 6 — Microclima e previsão</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html"><span class="brand-icon">🌦️</span><span>Clube de Ciências Tec</span></a>
+      <div class="toplinks"><a href="05-missao-clima.html">← Anterior</a><a href="../materiais/index.html">Materiais</a><a href="07-programacao-python.html">Próximo →</a></div>
+    </div>
+  </div>
+
+  <main class="lesson-page">
+    <span class="section-kicker">ENCONTRO 6 · PADRÕES E PREVISÃO</span>
+    <h1>Missões do microclima da escola</h1>
+    <p class="lead">Vamos organizar a sequência do tempo, construir gráficos e testar uma primeira regra de previsão de chuva.</p>
+
+    <div class="lesson-summary">
+      <div>
+        <h2>Pergunta investigativa</h2>
+        <p>Os dados da estação meteorológica ajudam a estimar a ocorrência de chuva perto da escola?</p>
+      </div>
+      <div>
+        <h2>Ao final, você consegue</h2>
+        <ul class="check-list">
+          <li>observar mudanças entre medições;</li>
+          <li>transformar uma hipótese em fórmula;</li>
+          <li>comparar previsão e realidade.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mission-strip">
+      <a href="#laboratorio">1 · Entender os dados</a>
+      <a href="#graficos">2 · Construir gráficos</a>
+      <a href="#padroes">3 · Procurar padrões</a>
+      <a href="#regra">4 · Criar a regra</a>
+      <a href="#teste">5 · Testar a previsão</a>
+      <a href="#avaliacao">6 · Avaliar o resultado</a>
+      <a href="#apresentacao">7 · Apresentar</a>
+      <a href="07-programacao-python.html">8 · Avançar para Python</a>
+    </div>
+
+    <section id="laboratorio" class="card">
+      <h2>1. Entrar no laboratório de dados</h2>
+      <p>Antes de prever, precisamos entender como a planilha representa cada medição.</p>
+
+      <div class="table-wrap">
+        <table class="data-table compact">
+          <thead>
+            <tr><th>Data e hora</th><th>Temperatura</th><th>Pressão</th><th>Chuva</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>10/06 às 08h</td><td>18 °C</td><td>1015 hPa</td><td>0 mm</td></tr>
+            <tr><td>10/06 às 10h</td><td>20 °C</td><td>1013 hPa</td><td>0 mm</td></tr>
+            <tr><td>10/06 às 12h</td><td>22 °C</td><td>1010 hPa</td><td>2 mm</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="concept-grid">
+        <div class="concept">
+          <h3>Linha</h3>
+          <p>Representa uma medição feita em um momento específico.</p>
+        </div>
+        <div class="concept">
+          <h3>Coluna</h3>
+          <p>Mostra como uma variável muda ao longo dos registros.</p>
+        </div>
+        <div class="concept">
+          <h3>Célula</h3>
+          <p>Guarda um valor localizado pelo encontro entre linha e coluna.</p>
+        </div>
+        <div class="concept">
+          <h3>Ordem temporal</h3>
+          <p>Coloca as medições do momento mais antigo para o mais recente.</p>
+        </div>
+      </div>
+
+      <ol class="step-list">
+        <li><strong>Abra uma cópia da planilha.</strong> Preserve os dados originais.</li>
+        <li><strong>Confira os títulos.</strong> Data, hora, temperatura, pressão e precipitação precisam estar claros.</li>
+        <li><strong>Ordene por data e hora.</strong> Só podemos calcular mudanças quando a sequência está correta.</li>
+        <li><strong>Observe as unidades.</strong> Temperatura em °C, pressão em hPa e chuva em mm.</li>
+      </ol>
+
+      <div class="callout green"><strong>Microclima</strong> é o clima observado em uma área pequena. Prédios, árvores, sombra, piso e vento podem fazer a região da escola se comportar de modo diferente de outros bairros.</div>
+    </section>
+
+    <section id="graficos" class="card">
+      <h2>2. Construir três gráficos</h2>
+      <p>A tabela mostra valores. O gráfico mostra o comportamento desses valores ao longo do tempo.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Gráfico</th><th>Tipo indicado</th><th>O que observar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Temperatura ao longo do tempo</td><td>Linha</td><td>Subidas, quedas, horários mais quentes e mudanças rápidas.</td></tr>
+            <tr><td>Pressão atmosférica ao longo do tempo</td><td>Linha</td><td>Períodos de aumento, estabilidade ou queda.</td></tr>
+            <tr><td>Chuva registrada na escola</td><td>Colunas</td><td>Quando choveu e quanto foi registrado.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <ol class="step-list">
+        <li>Selecione data/hora e a variável que deseja observar.</li>
+        <li>Clique em <strong>Inserir → Gráfico</strong>.</li>
+        <li>Escolha o tipo indicado na tabela.</li>
+        <li>Coloque um título claro e confira os nomes dos eixos.</li>
+        <li>Compare os três gráficos no mesmo trecho do tempo.</li>
+      </ol>
+
+      <details class="answer">
+        <summary>Por que usamos linha para temperatura e pressão, mas colunas para chuva?</summary>
+        <p>A linha facilita acompanhar uma mudança contínua. As colunas destacam eventos separados e quantidades, como 0 mm, 2 mm ou 4 mm de chuva.</p>
+      </details>
+    </section>
+
+    <section id="padroes" class="card">
+      <h2>3. Procurar o que aconteceu antes da chuva</h2>
+      <p>Agora a turma deixa de apenas descrever os dados. Vamos procurar sinais que possam aparecer antes de um registro com chuva.</p>
+
+      <div class="learning-cycle">
+        <div class="cycle-step">
+          <span class="cycle-label">1 · Localize</span>
+          <h3>Encontre um evento de chuva</h3>
+          <p>Procure uma linha em que a precipitação seja maior que zero.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">2 · Volte no tempo</span>
+          <h3>Observe 2 ou 3 linhas anteriores</h3>
+          <p>Veja o que aconteceu com a temperatura e a pressão.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">3 · Compare</span>
+          <h3>Repita em outros eventos</h3>
+          <p>Um padrão precisa aparecer mais de uma vez para merecer atenção.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table compact">
+          <thead>
+            <tr><th>Evento</th><th>A pressão caiu antes?</th><th>A temperatura mudou?</th><th>O que percebemos?</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Chuva 1</td><td>Conferir</td><td>Conferir</td><td>Comparar com o gráfico</td></tr>
+            <tr><td>Chuva 2</td><td>Conferir</td><td>Conferir</td><td>Comparar com o primeiro evento</td></tr>
+            <tr><td>Chuva 3</td><td>Conferir</td><td>Conferir</td><td>Procurar repetição</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout amber"><strong>Padrão não é causa.</strong> Se a pressão caiu antes de alguns eventos, isso cria uma hipótese para testar. Ainda não prova que toda queda de pressão provoca chuva.</div>
+    </section>
+
+    <section id="regra" class="card">
+      <h2>4. Transformar uma hipótese em regra</h2>
+      <p>Uma regra precisa ser simples, clara e possível de testar em todas as linhas.</p>
+
+      <h3>Primeiro, calcule as mudanças</h3>
+      <p>Considere esta organização: temperatura em B, pressão em C, precipitação em D, variação da temperatura em E e variação da pressão em F.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Nova coluna</th><th>Fórmula na linha 3</th><th>Como interpretar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Variação da temperatura</td><td><code>=B3-B2</code></td><td>Positivo: aumentou. Negativo: diminuiu. Zero: ficou igual.</td></tr>
+            <tr><td>Variação da pressão</td><td><code>=C3-C2</code></td><td>Positivo: aumentou. Negativo: diminuiu. Zero: ficou igual.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>A primeira linha fica sem variação, porque não existe uma medição anterior para comparar. Depois de escrever a fórmula na linha 3, arraste-a para baixo.</p>
+
+      <h3>Exemplos de regras que podem ser testadas</h3>
+      <ul>
+        <li>Se a pressão diminuir, prever chuva.</li>
+        <li>Se a pressão e a temperatura diminuírem, prever chuva.</li>
+        <li>Se já choveu e a pressão continuar caindo, prever continuação da chuva.</li>
+      </ul>
+
+      <div class="callout purple"><strong>Comece simples:</strong> uma regra com uma condição é mais fácil de testar e explicar. Depois, compare com uma regra de duas condições.</div>
+
+      <p><strong>Regra de uma condição:</strong></p>
+      <span class="formula">=SE(F3&lt;0;"Sim";"Não")</span>
+      <p><strong>Regra de duas condições:</strong></p>
+      <span class="formula">=SE(E(E3&lt;0;F3&lt;0);"Sim";"Não")</span>
+    </section>
+
+    <section id="teste" class="card">
+      <h2>5. Comparar previsão com realidade</h2>
+      <p>Use três colunas: <strong>Previsão</strong> em G, <strong>Choveu de verdade?</strong> em H e <strong>Resultado</strong> em I.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Coluna</th><th>Fórmula na linha 3</th><th>Função</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Previsão</td><td><code>=SE(F3&lt;0;"Sim";"Não")</code></td><td>Aplica a regra escolhida.</td></tr>
+            <tr><td>Choveu de verdade?</td><td><code>=SE(D3&gt;0;"Sim";"Não")</code></td><td>Transforma a chuva medida em Sim ou Não.</td></tr>
+            <tr><td>Resultado</td><td><code>=SE(G3=H3;"Acertou";"Errou")</code></td><td>Compara a previsão com o que aconteceu.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout green"><strong>Por que usamos “Sim” e “Não” nas duas colunas?</strong> Porque a comparação só funciona quando previsão e realidade usam as mesmas palavras.</div>
+    </section>
+
+    <section id="avaliacao" class="card">
+      <h2>6. Calcular e interpretar a taxa de acerto</h2>
+      <div class="concept-grid">
+        <div class="concept">
+          <h3>Contar acertos</h3>
+          <span class="formula">=CONT.SE(I3:I152;"Acertou")</span>
+        </div>
+        <div class="concept">
+          <h3>Contar erros</h3>
+          <span class="formula">=CONT.SE(I3:I152;"Errou")</span>
+        </div>
+        <div class="concept">
+          <h3>Taxa de acerto</h3>
+          <span class="formula">=CONT.SE(I3:I152;"Acertou")/CONT.VALORES(I3:I152)</span>
+          <p>Depois, formate a célula como porcentagem.</p>
+        </div>
+        <div class="concept">
+          <h3>Comparar regras</h3>
+          <p>Teste uma regra simples e outra com duas condições. Veja qual erra menos e em quais situações.</p>
+        </div>
+      </div>
+
+      <h3>Um cuidado importante com a taxa de acerto</h3>
+      <p>Na base de 151 registros, 119 não tiveram chuva. Uma regra preguiçosa que respondesse sempre “Não” acertaria cerca de 79% das linhas, mas nunca avisaria uma chuva.</p>
+      <div class="callout red"><strong>Portanto:</strong> não basta olhar apenas a porcentagem. Confira também quantas chuvas a regra conseguiu prever e quantas deixou passar.</div>
+
+      <details class="answer">
+        <summary>O que seria uma melhoria real?</summary>
+        <p>Uma regra útil deve superar a resposta “sempre não chove” e reconhecer parte dos eventos de chuva. Também deve ser testada em dados que não foram usados para inventar a regra.</p>
+      </details>
+    </section>
+
+    <section id="apresentacao" class="card">
+      <h2>7. Apresentar a descoberta científica</h2>
+      <ol class="step-list">
+        <li><strong>Mostre a regra.</strong> Explique quais variáveis e condições foram usadas.</li>
+        <li><strong>Mostre um gráfico.</strong> Aponte o padrão que motivou a regra.</li>
+        <li><strong>Apresente acertos e erros.</strong> Não esconda os casos em que a previsão falhou.</li>
+        <li><strong>Compare com uma regra simples.</strong> Ela foi melhor do que responder sempre “Não”?</li>
+        <li><strong>Proponha uma melhoria.</strong> Mais dados, outra variável ou uma condição diferente?</li>
+      </ol>
+
+      <div class="callout green"><strong>Resultado do encontro:</strong> o grupo criou um pequeno modelo preditivo. Ele pode ser simples e até errar bastante; o importante é que sua regra seja clara, testável e melhorada com evidências.</div>
+      <p><a class="btn primary" href="../materiais/planilhas/encontro-04-dados-151-registros.csv" download>Baixar dados climáticos →</a> <a class="btn" href="../materiais/index.html">Ver materiais →</a></p>
+    </section>
+
+    <p class="source-list"><strong>Material-base:</strong> “Missões do Microclima da Escola”, sequência de 22 missões aplicada antes da introdução à programação.</p>
+    <div class="lesson-nav"><a class="btn" href="05-missao-clima.html">← Missão Clima</a><a class="btn primary" href="07-programacao-python.html">Encontro 7 · Programação →</a></div>
+  </main>
+</body>
+</html>

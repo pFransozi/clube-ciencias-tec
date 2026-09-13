@@ -1,1 +1,176 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Encontro 3 — Revisando os dados</title><link rel="stylesheet" href="../assets/site.css"></head><body><div class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html"><span class="brand-icon">🌦️</span><span>Clube de Ciências Tec</span></a><div class="toplinks"><a href="02-analise-clima.html">← Anterior</a><a href="../materiais/index.html">Materiais</a><a href="04-estatistica.html">Próximo →</a></div></div></div><main class="lesson-page"><span class="section-kicker">ENCONTRO 3 · FASE 1</span><h1>Podemos confiar nos nossos dados?</h1><p class="lead">Revisão dos registros, correção da planilha e retomada das fórmulas.</p><section class="card"><h2>🔍 Missão: revisar a tabela</h2><p>Antes de fazer novas contas, o grupo compara a planilha com as imagens dos registros e confere linha por linha.</p><ul><li>Números parecidos, como 0 e 6.</li><li>Datas e horários.</li><li>Valores com vírgula.</li><li>Possíveis erros de digitação.</li></ul><div class="callout amber"><strong>Quando encontrar um erro:</strong> corrigir a célula, destacar a alteração e pedir ajuda quando houver dúvida.</div></section><section class="card"><h2>🧠 Fórmulas retomadas</h2><ul><li><strong>MÉDIA</strong> — valor que representa o grupo.</li><li><strong>MÁXIMO</strong> e <strong>MÍNIMO</strong> — maior e menor valor.</li><li><strong>CONT.NÚM</strong> e <strong>CONT.VALORES</strong> — contagem de registros.</li><li><strong>SOMA</strong> — total acumulado.</li><li><strong>SE</strong> — resposta diferente conforme uma condição.</li><li><strong>MEDIANA</strong> — valor central do conjunto ordenado.</li></ul></section><section class="card"><h2>🌧️ Investigando a chuva</h2><p>O material propõe localizar registros com chuva, encontrar o maior valor de precipitação, calcular a soma total e criar uma coluna “Situação da chuva” com a fórmula SE.</p></section><section class="card"><h2>📁 Materiais deste encontro</h2><p>Use a planilha transcrita para comparar os valores com os registros originais. A lista de conferência destaca pontos que merecem atenção.</p><p><a class="btn primary" href="../materiais/planilhas/encontro-03-dados-extraidos-fotos.csv" download>Baixar planilha para revisão →</a> <a class="btn" href="../materiais/planilhas/encontro-03-conferencia.csv" download>Baixar pontos para conferência →</a></p><p><a class="btn" href="../materiais/index.html">Ver todos os materiais →</a></p></section><div class="callout green">Ideia central do encontro: uma planilha não serve apenas para guardar dados; ela também ajuda a organizar, corrigir, calcular, comparar e entender melhor as informações.</div><p class="source-list"><strong>Fontes:</strong> 03/atividade_estudante_planilha.docx, 03/dados_climaticos_extraidos_fotos.xlsm e fotografias dos registros.</p><div class="lesson-nav"><a class="btn" href="02-analise-clima.html">← Encontro 2</a><a class="btn primary" href="04-estatistica.html">Encontro 4 →</a></div></main></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Aula sobre revisão, correção e qualidade dos dados meteorológicos coletados pela escola.">
+  <title>Encontro 3 — Revisando os dados</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html"><span class="brand-icon">🌦️</span><span>Clube de Ciências Tec</span></a>
+      <div class="toplinks"><a href="02-analise-clima.html">← Anterior</a><a href="../materiais/index.html">Materiais</a><a href="04-estatistica.html">Próximo →</a></div>
+    </div>
+  </div>
+
+  <main class="lesson-page">
+    <span class="section-kicker">ENCONTRO 3 · QUALIDADE DOS DADOS</span>
+    <h1>Podemos confiar nos nossos dados?</h1>
+    <p class="lead">A turma compara a planilha com os registros originais, identifica valores duvidosos e aprende que revisar faz parte da investigação.</p>
+
+    <div class="lesson-summary">
+      <div>
+        <h2>Pergunta do encontro</h2>
+        <p>Como perceber se um dado foi digitado corretamente antes de usar fórmulas e gráficos?</p>
+      </div>
+      <div>
+        <h2>Ao final, você consegue</h2>
+        <ul class="check-list">
+          <li>comparar fonte e planilha;</li>
+          <li>diferenciar erro de valor incomum;</li>
+          <li>marcar dúvidas sem inventar respostas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="mini-nav" aria-label="Partes da aula">
+      <a href="#origem">Dados reais</a>
+      <a href="#detetive">Modo detetive</a>
+      <a href="#formulas">Fórmulas</a>
+      <a href="#chuva">Investigar chuva</a>
+    </nav>
+
+    <section id="origem" class="card">
+      <h2>1. Da ficha preenchida à planilha</h2>
+      <p>Os registros desta aula foram transcritos de fotografias das fichas preenchidas na estação. Esse caminho pode produzir dúvidas: letra difícil, número rasurado, campo deslocado ou valor digitado na coluna errada.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Coluna</th><th>O que representa no material</th><th>Exemplo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Nome</td><td>Identificação de quem fez o registro.</td><td>MANU / WIL</td></tr>
+            <tr><td>Data e hora</td><td>Momento em que a medição foi anotada.</td><td>16/03 às 09:37</td></tr>
+            <tr><td>TS e TU</td><td>Duas medidas de temperatura registradas na ficha.</td><td>25 e 22</td></tr>
+            <tr><td>Umidade (%)</td><td>Quantidade de umidade indicada em porcentagem.</td><td>78</td></tr>
+            <tr><td>HTP</td><td>Leitura de pressão presente no registro original.</td><td>913</td></tr>
+            <tr><td>Chuva (mm)</td><td>Precipitação registrada.</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout green"><strong>Regra da ciência:</strong> se não conseguimos ler um valor com segurança, registramos a dúvida. Não escolhemos um número apenas para preencher a célula.</div>
+    </section>
+
+    <section id="detetive" class="card">
+      <h2>2. Modo detetive: encontrar o que precisa de conferência</h2>
+      <div class="learning-cycle">
+        <div class="cycle-step">
+          <span class="cycle-label">1 · Entenda</span>
+          <h3>Valor incomum não é erro automático</h3>
+          <p>Um número diferente pode ser verdadeiro. Ele só se torna erro quando a fonte mostra outro valor ou a digitação é impossível.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">2 · Veja um exemplo</span>
+          <h3>Umidade igual a 2%</h3>
+          <p>Como os registros próximos estão entre 60% e 81%, o valor 2% merece conferência na fotografia.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">3 · Faça</span>
+          <h3>Compare linha por linha</h3>
+          <p>Uma pessoa observa a imagem; a outra confere a mesma linha na planilha. Depois troquem de função.</p>
+        </div>
+      </div>
+
+      <h3>Procure estes sinais</h3>
+      <ul class="check-list">
+        <li>números parecidos, como 0 e 6;</li>
+        <li>vírgulas que desapareceram, como 23,5 virar 235;</li>
+        <li>datas e horários deslocados;</li>
+        <li>campos vazios em uma linha preenchida;</li>
+        <li>valores muito distantes dos registros vizinhos;</li>
+        <li>nomes ou siglas difíceis de ler.</li>
+      </ul>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Situação encontrada</th><th>Ação correta</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>A fotografia mostra claramente outro número.</td><td>Corrija a célula e marque a alteração.</td></tr>
+            <tr><td>O valor é estranho, mas pode ser verdadeiro.</td><td>Compare com a fonte e com registros próximos.</td></tr>
+            <tr><td>A escrita não permite decidir entre duas opções.</td><td>Mantenha a dúvida registrada e peça conferência.</td></tr>
+            <tr><td>Não existe medição naquele dia.</td><td>Não invente zero: dado ausente e valor zero não são a mesma coisa.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="answer">
+        <summary>Por que zero e célula vazia são diferentes?</summary>
+        <p><strong>Zero</strong> informa que a variável foi medida e seu valor foi zero, como 0 mm de chuva. <strong>Célula vazia</strong> pode indicar que ninguém mediu ou que o registro se perdeu.</p>
+      </details>
+    </section>
+
+    <section id="formulas" class="card">
+      <h2>3. Depois da revisão, retomamos as fórmulas</h2>
+      <p>As fórmulas só produzem resultados confiáveis quando os dados usados também são confiáveis.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Fórmula</th><th>O que faz</th><th>Exemplo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>MÉDIA</td><td>Calcula um valor que representa o grupo.</td><td><code>=MÉDIA(D4:D34)</code></td></tr>
+            <tr><td>MÁXIMO</td><td>Encontra o maior número.</td><td><code>=MÁXIMO(D4:D34)</code></td></tr>
+            <tr><td>MÍNIMO</td><td>Encontra o menor número.</td><td><code>=MÍNIMO(D4:D34)</code></td></tr>
+            <tr><td>CONT.NÚM</td><td>Conta células que possuem números.</td><td><code>=CONT.NÚM(D4:D34)</code></td></tr>
+            <tr><td>CONT.VALORES</td><td>Conta células preenchidas.</td><td><code>=CONT.VALORES(A4:A34)</code></td></tr>
+            <tr><td>SOMA</td><td>Calcula um total acumulado.</td><td><code>=SOMA(H4:H34)</code></td></tr>
+            <tr><td>SE</td><td>Mostra uma resposta de acordo com uma condição.</td><td><code>=SE(H4&gt;0;"Choveu";"Não choveu")</code></td></tr>
+            <tr><td>MED</td><td>Encontra o valor central dos dados ordenados.</td><td><code>=MED(D4:D34)</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source-list">Os números das linhas são exemplos. Ajuste o intervalo para a posição dos dados na sua planilha.</p>
+    </section>
+
+    <section id="chuva" class="card">
+      <h2>4. Prática guiada: revisar e investigar</h2>
+      <ol class="step-list">
+        <li><strong>Abra as fotografias e a planilha.</strong> Não comece pelas fórmulas.</li>
+        <li><strong>Confira os registros.</strong> Marque as células corrigidas com uma cor combinada pela turma.</li>
+        <li><strong>Conte os dados.</strong> Veja quantos valores numéricos existem nas colunas TS e chuva.</li>
+        <li><strong>Resuma TS e TU.</strong> Calcule média, mínimo, máximo e mediana.</li>
+        <li><strong>Crie “Situação da chuva”.</strong> Use SE para mostrar “Choveu” ou “Não choveu”.</li>
+        <li><strong>Observe relações.</strong> Compare umidade, TS, TU e os registros com chuva.</li>
+      </ol>
+
+      <h3>Um exemplo de leitura cuidadosa</h3>
+      <div class="table-wrap">
+        <table class="data-table compact">
+          <thead>
+            <tr><th>Data e hora</th><th>TS</th><th>TU</th><th>Umidade</th><th>Chuva</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>19/03 às 09:35</td><td>24,5</td><td>22</td><td>81%</td><td>1 mm</td></tr>
+            <tr><td>19/03 às 15:30</td><td>27</td><td>23</td><td>63%</td><td>0 mm</td></tr>
+            <tr><td>23/03 às 09:38</td><td>25</td><td>22</td><td>71%</td><td>3 mm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Podemos observar que houve chuva em dois registros. Ainda assim, três linhas não bastam para criar uma regra geral sobre umidade ou temperatura.</p>
+
+      <div class="callout purple"><strong>Detetive de dados:</strong> o objetivo não é “achar um erro a qualquer custo”. É descobrir quais valores têm evidência suficiente para serem usados.</div>
+      <p><a class="btn primary" href="../materiais/planilhas/encontro-03-dados-extraidos-fotos.csv" download>Baixar planilha para revisão →</a> <a class="btn" href="../materiais/planilhas/encontro-03-conferencia.csv" download>Ver pontos para conferência →</a></p>
+    </section>
+
+    <p class="source-list"><strong>Material-base:</strong> atividade “Explorando a Planilha do Tempo”, planilha transcrita e fotografias dos registros aplicados no Encontro 3.</p>
+    <div class="lesson-nav"><a class="btn" href="02-analise-clima.html">← Encontro 2</a><a class="btn primary" href="04-estatistica.html">Encontro 4 →</a></div>
+  </main>
+</body>
+</html>

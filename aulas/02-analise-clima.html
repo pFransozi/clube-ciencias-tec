@@ -1,1 +1,190 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Encontro 2 — O que os dados do clima nos contam?</title><link rel="stylesheet" href="../assets/site.css"></head><body><div class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html"><span class="brand-icon">🌦️</span><span>Clube de Ciências Tec</span></a><div class="toplinks"><a href="01-historia-dados.html">← Anterior</a><a href="03-revisao-dados.html">Próximo →</a></div></div></div><main class="lesson-page"><span class="section-kicker">ENCONTRO 2 · FASE 1</span><h1>O que os dados do clima nos contam?</h1><p class="lead">Primeiras análises da temperatura, chuva e vento usando a planilha.</p><section class="card"><h2>🎯 O que vamos aprender</h2><ul><li>Organizar e revisar os dados coletados.</li><li>Usar fórmulas simples da planilha.</li><li>Descobrir informações sobre temperatura, chuva e vento.</li><li>Montar gráficos e interpretar o que eles mostram.</li></ul></section><section class="card"><h2>🔎 Perguntas para investigar</h2><ul><li>Qual foi o dia com maior e menor temperatura?</li><li>Em quais dias choveu?</li><li>Qual foi o total de chuva no período?</li><li>O vento ficou mais forte em dias de chuva?</li><li>A temperatura ficou estável ou oscilou bastante?</li><li>Existe algum dia fora do padrão?</li></ul></section><section class="card"><h2>📊 Sequência prática</h2><ol><li><strong>Revisão:</strong> conferir linhas e colunas.</li><li><strong>Cálculos básicos:</strong> média, máximo, mínimo e total.</li><li><strong>Contagem:</strong> registros com chuva e sem chuva.</li><li><strong>Gráficos:</strong> linha para temperatura e colunas para chuva.</li><li><strong>Interpretação:</strong> escrever conclusões curtas com base nos resultados.</li></ol></section><div class="callout green">O gráfico ajuda a enxergar rapidamente subidas, quedas, oscilações e valores fora do padrão que seriam mais difíceis de perceber olhando apenas a tabela.</div><p class="source-list"><strong>Fonte:</strong> 02/material_aula_2_clima_estudantes.docx</p><div class="lesson-nav"><a class="btn" href="01-historia-dados.html">← Encontro 1</a><a class="btn primary" href="03-revisao-dados.html">Encontro 3 →</a></div></main></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Aula guiada de análise de dados climáticos com média, mínimo, máximo, total, contagem e gráficos.">
+  <title>Encontro 2 — O que os dados do clima nos contam?</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html"><span class="brand-icon">🌦️</span><span>Clube de Ciências Tec</span></a>
+      <div class="toplinks"><a href="01-historia-dados.html">← Anterior</a><a href="../materiais/index.html">Materiais</a><a href="03-revisao-dados.html">Próximo →</a></div>
+    </div>
+  </div>
+
+  <main class="lesson-page">
+    <span class="section-kicker">ENCONTRO 2 · PRIMEIRAS ANÁLISES</span>
+    <h1>O que os dados do clima nos contam?</h1>
+    <p class="lead">Agora que cada informação ocupa o lugar certo na planilha, podemos calcular, comparar e transformar números em explicações.</p>
+
+    <div class="lesson-summary">
+      <div>
+        <h2>Pergunta do encontro</h2>
+        <p>O que conseguimos descobrir sobre temperatura, chuva e vento usando cálculos simples?</p>
+      </div>
+      <div>
+        <h2>Ao final, você consegue</h2>
+        <ul class="check-list">
+          <li>escolher um cálculo adequado;</li>
+          <li>usar fórmulas básicas;</li>
+          <li>ler um gráfico de linha ou colunas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="mini-nav" aria-label="Partes da aula">
+      <a href="#medidas">Cinco medidas</a>
+      <a href="#exemplo">Exemplo completo</a>
+      <a href="#planilha">Na planilha</a>
+      <a href="#graficos">Gráficos</a>
+    </nav>
+
+    <section id="medidas" class="card">
+      <h2>1. Cinco maneiras de resumir os dados</h2>
+      <p>Uma tabela com muitos números pode ser difícil de ler. Cada medida abaixo responde a uma pergunta diferente.</p>
+
+      <div class="concept-grid">
+        <div class="concept">
+          <h3>Média</h3>
+          <p>Representa o comportamento geral. Somamos os valores e dividimos pela quantidade.</p>
+          <span class="formula">=MÉDIA(C2:C16)</span>
+        </div>
+        <div class="concept">
+          <h3>Máximo</h3>
+          <p>Encontra o maior valor: o momento mais quente, a chuva mais intensa ou o vento mais forte.</p>
+          <span class="formula">=MÁXIMO(C2:C16)</span>
+        </div>
+        <div class="concept">
+          <h3>Mínimo</h3>
+          <p>Encontra o menor valor: o momento mais frio ou o vento mais fraco.</p>
+          <span class="formula">=MÍNIMO(C2:C16)</span>
+        </div>
+        <div class="concept">
+          <h3>Total</h3>
+          <p>Soma os valores. É útil para chuva acumulada, mas não costuma fazer sentido somar temperaturas.</p>
+          <span class="formula">=SOMA(D2:D16)</span>
+        </div>
+        <div class="concept">
+          <h3>Contagem com condição</h3>
+          <p>Conta quantos registros atendem a uma regra. Aqui, quantas medições registraram chuva.</p>
+          <span class="formula">=CONT.SE(D2:D16;">0")</span>
+        </div>
+        <div class="concept">
+          <h3>Intervalo</h3>
+          <p><code>C2:C16</code> significa: use todas as células da coluna C, começando na linha 2 e terminando na 16.</p>
+        </div>
+      </div>
+
+      <div class="callout amber"><strong>Cuidado:</strong> o computador calcula o que pedimos, mesmo quando a pergunta não faz sentido. Antes da fórmula, escolha o que deseja descobrir.</div>
+    </section>
+
+    <section id="exemplo" class="card">
+      <h2>2. Exemplo completo: três horários do mesmo dia</h2>
+      <div class="table-wrap">
+        <table class="data-table compact">
+          <thead>
+            <tr><th>Hora</th><th>Temperatura (°C)</th><th>Chuva (mm)</th><th>Vento (km/h)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>08h</td><td>22</td><td>0</td><td>5</td></tr>
+            <tr><td>14h</td><td>28</td><td>2</td><td>12</td></tr>
+            <tr><td>20h</td><td>24</td><td>5</td><td>10</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="learning-cycle">
+        <div class="cycle-step">
+          <span class="cycle-label">1 · Pergunta</span>
+          <h3>Como foi a temperatura?</h3>
+          <p>Queremos um valor geral, o maior e o menor valor.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">2 · Cálculo</span>
+          <h3>Organize as operações</h3>
+          <p>Média: (22 + 28 + 24) ÷ 3. Máximo: maior número. Mínimo: menor número.</p>
+        </div>
+        <div class="cycle-step">
+          <span class="cycle-label">3 · Interpretação</span>
+          <h3>Explique o resultado</h3>
+          <p>A tarde foi o momento mais quente e a temperatura média ficou perto de 25 °C.</p>
+        </div>
+      </div>
+
+      <div class="result-row" aria-label="Resultados do exemplo">
+        <span class="result-chip">Média: <strong>24,7 °C</strong></span>
+        <span class="result-chip">Máximo: <strong>28 °C</strong></span>
+        <span class="result-chip">Mínimo: <strong>22 °C</strong></span>
+        <span class="result-chip">Chuva total: <strong>7 mm</strong></span>
+      </div>
+
+      <details class="answer">
+        <summary>O vento ficou mais forte quando apareceu chuva?</summary>
+        <p>Neste pequeno exemplo, sim. O vento passou de 5 km/h sem chuva para 12 km/h quando começou a chover. Mas três registros ainda são poucos para afirmar que isso sempre acontece.</p>
+      </details>
+    </section>
+
+    <section id="planilha" class="card">
+      <h2>3. Prática guiada na planilha</h2>
+      <ol class="step-list">
+        <li><strong>Confira os dados.</strong> Veja se todas as linhas têm data, hora e valores nas colunas corretas.</li>
+        <li><strong>Comece pela temperatura.</strong> Calcule média, máximo e mínimo.</li>
+        <li><strong>Investigue a chuva.</strong> Calcule o total e conte os registros maiores que zero.</li>
+        <li><strong>Observe o vento.</strong> Encontre o maior e o menor valor.</li>
+        <li><strong>Compare os resultados.</strong> Procure dias ou horários que parecem diferentes dos demais.</li>
+      </ol>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Quero descobrir</th><th>Fórmula de exemplo</th><th>O resultado significa</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Temperatura média</td><td><code>=MÉDIA(C2:C16)</code></td><td>Um valor que representa as temperaturas do período.</td></tr>
+            <tr><td>Maior temperatura</td><td><code>=MÁXIMO(C2:C16)</code></td><td>O pico de temperatura.</td></tr>
+            <tr><td>Menor temperatura</td><td><code>=MÍNIMO(C2:C16)</code></td><td>O menor valor registrado.</td></tr>
+            <tr><td>Chuva total</td><td><code>=SOMA(D2:D16)</code></td><td>Quantos milímetros se acumularam.</td></tr>
+            <tr><td>Registros com chuva</td><td><code>=CONT.SE(D2:D16;">0")</code></td><td>Quantas medições tiveram chuva.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="graficos" class="card">
+      <h2>4. Transformar números em gráficos</h2>
+      <p>O gráfico funciona como uma lupa visual. Ele ajuda a enxergar subidas, quedas, picos e valores fora do padrão.</p>
+
+      <div class="concept-grid">
+        <div class="concept">
+          <h3>Gráfico de linha</h3>
+          <p>Use quando quiser acompanhar uma mudança ao longo do tempo, como a temperatura durante o dia.</p>
+        </div>
+        <div class="concept">
+          <h3>Gráfico de colunas</h3>
+          <p>Use quando quiser comparar quantidades, como a chuva registrada em diferentes dias.</p>
+        </div>
+      </div>
+
+      <ol class="step-list">
+        <li>Selecione a coluna de data ou horário e a coluna da variável.</li>
+        <li>Clique em <strong>Inserir → Gráfico</strong>.</li>
+        <li>Escolha linha para temperatura e colunas para chuva.</li>
+        <li>Escreva um título que diga claramente o que o gráfico mostra.</li>
+        <li>Observe: onde há subida, queda, pico ou valor estranho?</li>
+      </ol>
+
+      <div class="callout purple"><strong>Gráfico sem título:</strong> parece mapa sem nome. Todo mundo olha e pergunta “mas estamos onde?”.</div>
+      <details class="answer">
+        <summary>Como transformar uma observação em conclusão?</summary>
+        <p>Evite escrever apenas “subiu” ou “baixou”. Diga a variável, o momento e o valor. Exemplo: “A temperatura subiu de 22 °C às 8h para 28 °C às 14h.”</p>
+      </details>
+    </section>
+
+    <p class="source-list"><strong>Material-base:</strong> material de apoio “O que os dados do clima nos contam?”, aplicado no Encontro 2.</p>
+    <div class="lesson-nav"><a class="btn" href="01-historia-dados.html">← Encontro 1</a><a class="btn primary" href="03-revisao-dados.html">Encontro 3 →</a></div>
+  </main>
+</body>
+</html>
