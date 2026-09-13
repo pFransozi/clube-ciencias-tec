@@ -921,6 +921,56 @@ code {
   font-weight: 750;
 }
 
+.diary-jump {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin: 18px 0;
+}
+
+.diary-jump a {
+  min-height: 78px;
+  padding: 13px 14px;
+  border: 1px solid #d6e2ff;
+  border-radius: 13px;
+  background: var(--blue-soft);
+  color: #334e9d;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.diary-jump span {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.diary-part {
+  scroll-margin-top: 88px;
+}
+
+.diary-part-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.diary-part-head p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.diary-note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .closing-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1080,6 +1130,18 @@ footer {
   .path-items,
   .mission-strip {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diary-jump {
+    grid-template-columns: 1fr;
+  }
+
+  .diary-part-head {
+    display: block;
+  }
+
+  .diary-part-head .btn {
+    margin-top: 10px;
   }
 
   .data-table {
